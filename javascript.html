@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>CET138 Portfolio</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fullstack.html">Full Stack</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="bootstrap.html">Bootstrap</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>JavaScript</h2>
+      <p>
+        JavaScript is a programming language used to add interactivity, dynamic
+        behaviour, DOM updates, user events, and practical UI features to web
+        pages.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>Introduction To JavaScript</h2>
+      <p class="explanation">
+        JavaScript is one of the most important programming languages used in
+        modern web development. HTML creates the structure of a webpage, CSS
+        controls the design, and JavaScript adds functionality so users can
+        interact with the page.
+      </p>
+
+      <p class="explanation">
+        JavaScript can be used to create image sliders, form validation,
+        dropdown menus, calculators, games, pop-up messages, digital clocks,
+        stopwatches, and many other interactive features.
+      </p>
+
+      <p class="explanation">
+        JavaScript was originally created for web browsers, but today it is also
+        used outside the browser with technologies such as Node.js. This means
+        developers can use JavaScript for both front-end and back-end
+        development.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>Why JavaScript Is Important</h2>
+      <p class="explanation">
+        JavaScript is important because it helps developers create websites that
+        are more engaging and user friendly. Without JavaScript, websites would
+        only display static information. JavaScript allows pages to react to user
+        actions such as clicking buttons, typing into forms, or moving the mouse.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Form Validation</h3>
+          <p>Checks user input before a form is submitted.</p>
+        </div>
+
+        <div class="card">
+          <h3>Real-Time Updates</h3>
+          <p>Updates page content without reloading the browser.</p>
+        </div>
+
+        <div class="card">
+          <h3>Animations</h3>
+          <p>Adds movement and visual effects to web pages.</p>
+        </div>
+
+        <div class="card">
+          <h3>Applications</h3>
+          <p>Creates calculators, games, shopping carts, and chat apps.</p>
+        </div>
+
+        <div class="card">
+          <h3>API Data</h3>
+          <p>Fetches data from external services and displays it on a page.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Features Of JavaScript</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Interactivity</td><td>Allows webpages to respond to user actions.</td></tr>
+            <tr><td>DOM Manipulation</td><td>Changes HTML content and CSS styles without reloading the page.</td></tr>
+            <tr><td>Variables</td><td>Stores data values that can be used later.</td></tr>
+            <tr><td>Functions</td><td>Reusable blocks of code that perform tasks.</td></tr>
+            <tr><td>Conditions</td><td>Allow JavaScript to make decisions.</td></tr>
+            <tr><td>Loops</td><td>Repeat code multiple times.</td></tr>
+            <tr><td>Arrays</td><td>Store multiple values in one variable.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>JavaScript And The DOM</h2>
+      <p class="explanation">
+        The DOM stands for Document Object Model. It represents the structure of
+        an HTML page as objects that JavaScript can access and modify. Using the
+        DOM, developers can change text, add or remove elements, change styles,
+        and respond to user actions.
+      </p>
+
+      <pre><code>const heading = document.querySelector("h2");
+heading.textContent = "Updated With JavaScript";</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>Event Handling In JavaScript</h2>
+      <p class="explanation">
+        Events occur when users interact with a webpage. Examples include
+        clicking buttons, typing in forms, and hovering over elements.
+        JavaScript can detect these events and respond to them.
+      </p>
+
+      <pre><code>button.addEventListener("click", function() {
+  alert("Button clicked!");
+});</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>Interactive Demo 1: Button Message</h2>
+      <p class="explanation">
+        This example uses an event listener to respond when the user clicks a
+        button. JavaScript updates the text directly on the page.
+      </p>
+
+      <div class="card references">
+        <h3>Click The Button</h3>
+        <p id="button-message">The message will appear here.</p>
+        <button type="button" class="btn" id="message-button">Show Message</button>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Interactive Demo 2: Digital Clock</h2>
+      <p class="explanation">
+        This digital clock uses JavaScript to read the current time and display
+        it in the browser. The time updates every second using
+        <code>setInterval()</code>.
+      </p>
+
+      <div class="card references">
+        <h3>Digital Clock</h3>
+        <p id="clock-output">00:00:00</p>
+      </div>
+
+      <pre><code>&lt;div id="clock-output"&gt;&lt;/div&gt;</code></pre>
+
+      <p class="explanation">
+        The clock output element is a placeholder where the current time is
+        rendered. The time is displayed as hours, minutes, and seconds with
+        leading zeros for single digits.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>Interactive Demo 3: Stopwatch</h2>
+      <p class="explanation">
+        This stopwatch uses JavaScript timing functions. It supports start,
+        pause, and reset. The elapsed time is calculated using
+        <code>Date.now()</code> to keep the timer accurate.
+      </p>
+
+      <div class="card references">
+        <h3>Stopwatch</h3>
+        <p id="stopwatch-output">00:00.00</p>
+        <button type="button" class="btn" id="start-stopwatch">Start</button>
+        <button type="button" class="btn" id="pause-stopwatch">Pause</button>
+        <button type="button" class="btn" id="reset-stopwatch">Reset</button>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Interactive Demo 4: Simple Calculator</h2>
+      <p class="explanation">
+        This calculator demonstrates variables, functions, conditions, and DOM
+        updates. JavaScript reads the numbers, checks the selected operation,
+        calculates the answer, and displays the result.
+      </p>
+
+      <form class="demo-form">
+        <label for="num-one">First Number</label>
+        <input type="number" id="num-one" placeholder="Enter first number">
+
+        <label for="operator">Operation</label>
+        <select id="operator">
+          <option value="add">Addition</option>
+          <option value="subtract">Subtraction</option>
+          <option value="multiply">Multiplication</option>
+          <option value="divide">Division</option>
+        </select>
+
+        <label for="num-two">Second Number</label>
+        <input type="number" id="num-two" placeholder="Enter second number">
+
+        <button type="button" class="btn" id="calculate-btn">Calculate</button>
+        <p id="calculator-result">Result will appear here.</p>
+      </form>
+    </section>
+
+    <section class="overview">
+      <h2>Interactive Demo 5: To-Do List</h2>
+      <p class="explanation">
+        This to-do list demonstrates how JavaScript can create elements
+        dynamically. Users can add tasks, and each task appears on the page
+        without reloading.
+      </p>
+
+      <form class="demo-form">
+        <label for="todo-input">New Task</label>
+        <input type="text" id="todo-input" placeholder="Enter a task">
+
+        <button type="button" class="btn" id="add-task-btn">Add Task</button>
+
+        <ul id="todo-list">
+          <li>Example task</li>
+        </ul>
+      </form>
+    </section>
+
+    <section class="overview">
+      <h2>Interactive Demo 6: Form Validation</h2>
+      <p class="explanation">
+        Form validation checks whether users enter correct information before
+        submitting a form. This improves user experience, data accuracy, and
+        website security.
+      </p>
+
+      <form class="demo-form">
+        <label for="validation-name">Name</label>
+        <input type="text" id="validation-name" placeholder="Enter your name">
+
+        <label for="validation-email">Email Address</label>
+        <input type="email" id="validation-email" placeholder="name@example.com">
+
+        <button type="button" class="btn" id="validate-btn">Validate Form</button>
+        <p id="validation-message">Validation message will appear here.</p>
+      </form>
+    </section>
+
+    <section class="overview">
+      <h2>JavaScript Objects</h2>
+      <p class="explanation">
+        JavaScript exposes many built-in objects that model the page, the
+        browser, and common data types. These objects provide useful properties
+        and methods for web development.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Object</th>
+              <th>Description</th>
+              <th>Examples</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>document</td><td>Represents the current HTML document.</td><td><code>querySelector()</code>, <code>getElementById()</code></td></tr>
+            <tr><td>element</td><td>Represents an HTML element.</td><td><code>textContent</code>, <code>style</code>, <code>setAttribute()</code></td></tr>
+            <tr><td>window</td><td>Represents the browser window or tab.</td><td><code>innerWidth</code>, <code>setTimeout()</code>, <code>alert()</code></td></tr>
+            <tr><td>location</td><td>Represents the current page URL.</td><td><code>href</code>, <code>reload()</code>, <code>assign()</code></td></tr>
+            <tr><td>console</td><td>Used for logging and debugging.</td><td><code>log()</code>, <code>warn()</code>, <code>error()</code></td></tr>
+            <tr><td>storage</td><td>Stores key-value data in the browser.</td><td><code>setItem()</code>, <code>getItem()</code>, <code>removeItem()</code></td></tr>
+            <tr><td>array</td><td>Stores ordered lists of values.</td><td><code>push()</code>, <code>map()</code>, <code>filter()</code></td></tr>
+            <tr><td>string</td><td>Stores text values.</td><td><code>length</code>, <code>includes()</code>, <code>trim()</code></td></tr>
+            <tr><td>number</td><td>Represents numeric values.</td><td><code>toFixed()</code>, <code>parseInt()</code>, <code>parseFloat()</code></td></tr>
+            <tr><td>math</td><td>Provides mathematical utilities.</td><td><code>random()</code>, <code>floor()</code>, <code>round()</code></td></tr>
+            <tr><td>date</td><td>Works with time and dates.</td><td><code>Date.now()</code>, <code>getFullYear()</code>, <code>toLocaleString()</code></td></tr>
+            <tr><td>object</td><td>Stores key-value data.</td><td><code>Object.keys()</code>, <code>Object.values()</code>, <code>Object.entries()</code></td></tr>
+            <tr><td>promise</td><td>Represents an asynchronous result.</td><td><code>then()</code>, <code>catch()</code>, <code>Promise.all()</code></td></tr>
+            <tr><td>JSON</td><td>Works with structured data format.</td><td><code>JSON.parse()</code>, <code>JSON.stringify()</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Language Features</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Classes</td><td>Blueprints for creating objects using constructors and methods.</td></tr>
+            <tr><td>Errors</td><td>Used to handle problems with <code>try</code>, <code>catch</code>, and <code>throw</code>.</td></tr>
+            <tr><td>Booleans</td><td>Represent logical values: <code>true</code> and <code>false</code>.</td></tr>
+            <tr><td>Operators</td><td>Perform operations such as arithmetic, comparison, and logic.</td></tr>
+            <tr><td>Statements</td><td>Control program flow using <code>if</code>, <code>else</code>, <code>for</code>, and <code>while</code>.</td></tr>
+            <tr><td>Typed Arrays</td><td>Work with binary data using fixed numeric types.</td></tr>
+            <tr><td>Iterators</td><td>Produce sequences of values, often used with <code>for...of</code>.</td></tr>
+            <tr><td>Promises</td><td>Handle asynchronous tasks that may complete in the future.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Modern JavaScript</h2>
+      <p class="explanation">
+        Modern JavaScript includes features introduced through newer ECMAScript
+        versions. These features help developers write cleaner, more powerful,
+        and more maintainable code.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Arrow Functions</h3>
+          <p>A shorter way to write functions.</p>
+        </div>
+
+        <div class="card">
+          <h3>Classes</h3>
+          <p>Used to create object blueprints.</p>
+        </div>
+
+        <div class="card">
+          <h3>Modules</h3>
+          <p>Allow code to be separated into reusable files.</p>
+        </div>
+
+        <div class="card">
+          <h3>Promises</h3>
+          <p>Handle asynchronous operations.</p>
+        </div>
+
+        <div class="card">
+          <h3>Async/Await</h3>
+          <p>Makes asynchronous code easier to read.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Advantages Of JavaScript</h2>
+
+      <div class="card references">
+        <h3>Main Advantages</h3>
+        <ul>
+          <li>Fast performance in the browser</li>
+          <li>Cross-platform support</li>
+          <li>Easy integration with HTML and CSS</li>
+          <li>Large developer community</li>
+          <li>Useful for both front-end and back-end development</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Conclusion</h2>
+      <p class="explanation">
+        JavaScript is an essential programming language for modern web
+        development. It allows developers to create dynamic and interactive
+        websites that improve user experience.
+      </p>
+
+      <p class="explanation">
+        Throughout this section, I demonstrated my understanding of JavaScript by
+        explaining key concepts such as variables, functions, arrays, loops,
+        conditions, DOM manipulation, event handling, objects, and modern
+        JavaScript features.
+      </p>
+
+      <p class="explanation">
+        The practical examples show how JavaScript can be used in real-world
+        applications such as calculators, to-do lists, digital clocks,
+        stopwatches, and form validation systems.
+      </p>
+
+      <div class="card references">
+        <h3>Sources Used For Research</h3>
+        <p>MDN Web Docs, W3Schools, JavaScript.info, and freeCodeCamp.</p>
+      </div>
+    </section>
+  </main>
+
+ <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Full Stack Portfolio</h3>
+        <p>
+          Demonstrating comprehensive understanding of modern web development
+          technologies and best practices.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="fullstack.html">Full Stack Development</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a>
+        <a href="javascript.html">JavaScript</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>nayankhadka2020@gmail.com</p>
+        <p>Nayan Khadka</p>
+        <p>University of Sunderland</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>This portfolio is part of the CET138 Full Stack Development module at the University of Sunderland.</p>
+      <p>Created by Nayan Khadka, 2026.</p>
+      <p>&copy; 2026 Full Stack Development Portfolio.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    const messageButton = document.getElementById("message-button");
+    const buttonMessage = document.getElementById("button-message");
+
+    if (messageButton && buttonMessage) {
+      messageButton.addEventListener("click", function() {
+        buttonMessage.textContent = "JavaScript changed this text after the button was clicked.";
+      });
+    }
+
+    const clockOut = document.getElementById("clock-output");
+
+    function updateClock() {
+      if (!clockOut) {
+        return;
+      }
+
+      const date = new Date();
+
+      function pad(number) {
+        return String(number).padStart(2, "0");
+      }
+
+      clockOut.textContent =
+        pad(date.getHours()) + ":" +
+        pad(date.getMinutes()) + ":" +
+        pad(date.getSeconds());
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    let swStart = 0;
+    let swElapsed = 0;
+    let swTimer = null;
+
+    const swOut = document.getElementById("stopwatch-output");
+    const swStartBtn = document.getElementById("start-stopwatch");
+    const swPauseBtn = document.getElementById("pause-stopwatch");
+    const swResetBtn = document.getElementById("reset-stopwatch");
+
+    function formatStopwatch(ms) {
+      const minutes = Math.floor(ms / 60000);
+      const seconds = Math.floor((ms % 60000) / 1000);
+      const hundredths = Math.floor((ms % 1000) / 10);
+
+      function pad(number) {
+        return String(number).padStart(2, "0");
+      }
+
+      return pad(minutes) + ":" + pad(seconds) + "." + pad(hundredths);
+    }
+
+    function renderStopwatch() {
+      if (swOut) {
+        swOut.textContent = formatStopwatch(swElapsed);
+      }
+    }
+
+    if (swStartBtn && swPauseBtn && swResetBtn && swOut) {
+      swStartBtn.addEventListener("click", function() {
+        if (swTimer) {
+          return;
+        }
+
+        swStart = Date.now() - swElapsed;
+
+        swTimer = setInterval(function() {
+          swElapsed = Date.now() - swStart;
+          renderStopwatch();
+        }, 10);
+      });
+
+      swPauseBtn.addEventListener("click", function() {
+        clearInterval(swTimer);
+        swTimer = null;
+      });
+
+      swResetBtn.addEventListener("click", function() {
+        clearInterval(swTimer);
+        swTimer = null;
+        swElapsed = 0;
+        renderStopwatch();
+      });
+    }
+
+    const calculateBtn = document.getElementById("calculate-btn");
+    const calculatorResult = document.getElementById("calculator-result");
+
+    if (calculateBtn && calculatorResult) {
+      calculateBtn.addEventListener("click", function() {
+        const numOne = Number(document.getElementById("num-one").value);
+        const numTwo = Number(document.getElementById("num-two").value);
+        const operator = document.getElementById("operator").value;
+        let result;
+
+        if (operator === "add") {
+          result = numOne + numTwo;
+        } else if (operator === "subtract") {
+          result = numOne - numTwo;
+        } else if (operator === "multiply") {
+          result = numOne * numTwo;
+        } else if (operator === "divide") {
+          if (numTwo === 0) {
+            calculatorResult.textContent = "Cannot divide by zero.";
+            return;
+          }
+
+          result = numOne / numTwo;
+        }
+
+        calculatorResult.textContent = "Result: " + result;
+      });
+    }
+
+    const addTaskBtn = document.getElementById("add-task-btn");
+    const todoInput = document.getElementById("todo-input");
+    const todoList = document.getElementById("todo-list");
+
+    if (addTaskBtn && todoInput && todoList) {
+      addTaskBtn.addEventListener("click", function() {
+        const taskText = todoInput.value.trim();
+
+        if (taskText === "") {
+          return;
+        }
+
+        const taskItem = document.createElement("li");
+        taskItem.textContent = taskText;
+        todoList.appendChild(taskItem);
+        todoInput.value = "";
+      });
+    }
+
+    const validateBtn = document.getElementById("validate-btn");
+    const validationMessage = document.getElementById("validation-message");
+
+    if (validateBtn && validationMessage) {
+      validateBtn.addEventListener("click", function() {
+        const name = document.getElementById("validation-name").value.trim();
+        const email = document.getElementById("validation-email").value.trim();
+
+        if (name === "" || email === "") {
+          validationMessage.textContent = "Please complete all fields.";
+        } else if (!email.includes("@")) {
+          validationMessage.textContent = "Please enter a valid email address.";
+        } else {
+          validationMessage.textContent = "Form validation successful.";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

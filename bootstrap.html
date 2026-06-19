@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Framework</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Match font and weight to other pages -->
+    <style>
+        :root {
+            --bs-body-font-family: Arial, sans-serif;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-weight: normal; /* normal text is not bold */
+        }
+        /* Headings and titles remain bold */
+        h1, h2, h3, h4, h5, h6,
+        .hero h2,
+        .card h3,
+        .overview h2,
+        .code-label .effect-name em,
+        .footer-nav-btn {
+            font-weight: bold;
+        }
+        /* Ensure form inputs and buttons use Arial, normal weight */
+        input, textarea, select, button, .btn {
+            font-family: Arial, sans-serif !important;
+            font-weight: normal !important;
+        }
+        /* Optionally, make labels bold if needed */
+        label {
+            font-weight: bold;
+        }
+        /* Any other bold elements from Bootstrap can be kept as is */
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav>
+            <h1>CET138 Portfolio</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fullstack.html">Full Stack</a></li>
+                <li><a href="html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <h2>Bootstrap Framework</h2>
+        <p>
+            Bootstrap is a popular, open-source CSS framework that provides ready-made
+            responsive grids, components, and utility classes for building modern,
+            mobile-first websites quickly.
+        </p>
+    </section>
+
+    <!-- ===== INTRO ===== -->
+    <section class="overview" id="bootstrap-intro">
+        <h2>Introduction to Bootstrap</h2>
+        <p class="explanation">
+            Bootstrap is a popular front-end framework used to design responsive and
+            mobile-friendly websites quickly and efficiently. It was originally
+            developed by Twitter and is now one of the most widely used CSS frameworks
+            in web development.
+        </p>
+        <p class="explanation">
+            Bootstrap contains pre-designed components, layout systems, utility
+            classes, and JavaScript features that help developers create professional
+            websites without writing large amounts of CSS from scratch.
+        </p>
+        <p class="explanation">
+            According to Bootstrap's official documentation, the framework provides
+            responsive design utilities, reusable components, and a powerful grid
+            system that makes webpage development faster and easier. Bootstrap is
+            especially useful for beginners because it simplifies webpage styling and
+            layout creation.
+        </p>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="overview">
+        <h2>Features Demonstrated in This Section</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Grid System</h3>
+                <p>Organizes webpage content into rows and responsive columns.</p>
+            </div>
+            <div class="card">
+                <h3>Responsive Design</h3>
+                <p>Allows layouts to adapt to phones, tablets, and desktop screens.</p>
+            </div>
+            <div class="card">
+                <h3>Navigation Bars</h3>
+                <p>Creates professional menus that work well on different screen sizes.</p>
+            </div>
+            <div class="card">
+                <h3>Cards and Buttons</h3>
+                <p>Displays content and actions in a clean, organized way.</p>
+            </div>
+            <div class="card">
+                <h3>Utilities</h3>
+                <p>Adds spacing, alignment, colors, borders, and typography quickly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHAT IS A FRONT-END FRAMEWORK? ===== -->
+    <section class="overview">
+        <h2>What is a Front-End Framework?</h2>
+        <p class="explanation">
+            A front-end framework is a collection of pre-written CSS and JavaScript
+            code that helps developers build websites faster and more efficiently.
+            Instead of writing every design feature manually, developers can use
+            ready-made classes and components provided by frameworks such as Bootstrap.
+        </p>
+        <p class="explanation">
+            Frameworks improve productivity because they provide reusable layouts,
+            styling, and responsive utilities. They also help maintain consistency
+            throughout a website.
+        </p>
+        <p class="explanation">
+            Bootstrap is considered one of the most beginner-friendly frameworks
+            because its documentation is well organized and easy to understand.
+        </p>
+    </section>
+
+    <!-- ===== CDN ===== -->
+    <section class="overview">
+        <h2>Using Bootstrap with CDN</h2>
+        <p class="explanation">
+            Bootstrap can be added to a webpage using a CDN, which stands for Content
+            Delivery Network. A CDN allows developers to use Bootstrap without
+            downloading the framework files manually.
+        </p>
+        <pre id="cdnCode"><code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code></pre>
+        <p class="explanation">
+            Using a CDN is useful because it makes setup faster and allows developers
+            to start using Bootstrap classes immediately.
+        </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 1. BOOTSTRAP GRID SYSTEM (INTERACTIVE) ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>1. Bootstrap Grid System</h2>
+        <p class="explanation">
+            One of the most important features of Bootstrap is its responsive grid
+            system. The grid system allows developers to organize webpage content into
+            rows and columns. Bootstrap uses a 12-column layout that automatically
+            adjusts based on screen size.
+        </p>
+
+        <!-- Controls -->
+        <div class="demo-controls mb-3 d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-bs active-btn" onclick="setBSGrid('two')">2 Columns</button>
+            <button class="btn btn-outline-bs" onclick="setBSGrid('three')">3 Columns</button>
+            <button class="btn btn-outline-bs" onclick="setBSGrid('four')">4 Columns</button>
+            <button class="btn btn-outline-bs" onclick="setBSGrid('six')">6 Columns</button>
+        </div>
+
+        <!-- Interactive Grid Demo -->
+        <div id="bsGridDemo" class="container mt-3 interactive-grid">
+            <div class="row g-3" id="gridRow">
+                <div class="col-md-6 col-lg-4 grid-col">Col 1</div>
+                <div class="col-md-6 col-lg-4 grid-col">Col 2</div>
+                <div class="col-md-6 col-lg-4 grid-col">Col 3</div>
+                <div class="col-md-6 col-lg-4 grid-col">Col 4</div>
+            </div>
+        </div>
+
+        <!-- Code Display -->
+        <div class="code-label mt-4">
+            <span class="effect-name">◈ <em>Bootstrap Grid</em> &nbsp;·&nbsp; HTML</span>
+            <span>code</span>
+        </div>
+        <pre id="gridCode" class="code-block-highlight"><code>&lt;div class="row g-3"&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;Col 1&lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;Col 2&lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;Col 3&lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;Col 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p class="explanation mt-3">
+            The class <code>.container</code> centers content, <code>.row</code>
+            creates a horizontal group of columns, and <code>.col-md-*</code>
+            creates responsive columns. The <code>.g-3</code> adds spacing between columns.
+        </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 2. RESPONSIVE DESIGN ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>2. Responsive Design</h2>
+        <p class="explanation">
+            Responsive design is one of Bootstrap's strongest features. Bootstrap
+            includes predefined responsive classes that automatically adapt webpage
+            layouts to different screen sizes.
+        </p>
+
+        <pre id="responsiveCode"><code>&lt;div class="col-sm-12 col-md-6 col-lg-4"&gt;
+    Responsive Column
+&lt;/div&gt;</code></pre>
+
+        <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Class</th>
+                    <th>Meaning</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td><code>col-sm-12</code></td>
+                    <td>Small screen</td>
+                    <td>Takes full width on smaller devices.</td>
+                </tr>
+                <tr>
+                    <td><code>col-md-6</code></td>
+                    <td>Medium screen</td>
+                    <td>Takes half width on medium devices.</td>
+                </tr>
+                <tr>
+                    <td><code>col-lg-4</code></td>
+                    <td>Large screen</td>
+                    <td>Takes one-third width on large devices.</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 3. NAVIGATION BARS ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>3. Navigation Bars</h2>
+        <p class="explanation">
+            Navigation bars are important because they help users move between
+            different sections of a website. Bootstrap provides ready-made navigation
+            bar components that are responsive and customizable.
+        </p>
+
+        <pre id="navbarCode"><code>&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Portfolio&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+        <p class="explanation">
+            The navigation bar can automatically collapse into a mobile menu on
+            smaller screens. This improves usability and mobile responsiveness.
+        </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 4. BOOTSTRAP CARDS (INTERACTIVE) ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>4. Bootstrap Cards</h2>
+        <p class="explanation">
+            Bootstrap cards are flexible containers used to display content such as
+            images, text, and buttons in a clean and organized layout. Cards are
+            commonly used in portfolio websites, blogs, and e-commerce websites.
+        </p>
+
+        <!-- Interactive Cards -->
+        <div class="container mt-3">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card h-100 clickable-card" data-bs-card="portfolio" onclick="showBSCard('portfolio')">
+                        <h3>Portfolio Card</h3>
+                        <p>This card can be used to display a project in a portfolio.</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 clickable-card" data-bs-card="blog" onclick="showBSCard('blog')">
+                        <h3>Blog Card</h3>
+                        <p>This card can organize blog content in a clean layout.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 clickable-card" data-bs-card="product" onclick="showBSCard('product')">
+                        <h3>Product Card</h3>
+                        <p>This card can be used in online shopping websites.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Display -->
+        <div class="code-label mt-4">
+            <span class="effect-name">◈ <em>Bootstrap Card</em> &nbsp;·&nbsp; HTML</span>
+            <span>click a card ↴</span>
+        </div>
+        <pre id="cardCode" class="code-block-highlight"><code>&lt;div class="card" style="width: 18rem;"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Project Title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Project description.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p class="explanation">
+            Cards improve webpage organization and create visually attractive content
+            sections. <strong>Click any card above</strong> to see its Bootstrap code.
+        </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 5. BUTTONS (INTERACTIVE) ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>5. Buttons</h2>
+        <p class="explanation">
+            Bootstrap provides many pre-designed button styles that can be added using
+            simple classes. Buttons are important because they help users interact
+            with websites.
+        </p>
+
+        <!-- Interactive Buttons -->
+        <div class="d-flex flex-wrap gap-3 mb-3">
+            <button class="btn btn-primary clickable-btn" data-bs-btn="primary" onclick="showBSButton('primary')">Primary</button>
+            <button class="btn btn-secondary clickable-btn" data-bs-btn="secondary" onclick="showBSButton('secondary')">Secondary</button>
+            <button class="btn btn-success clickable-btn" data-bs-btn="success" onclick="showBSButton('success')">Success</button>
+            <button class="btn btn-warning clickable-btn" data-bs-btn="warning" onclick="showBSButton('warning')">Warning</button>
+            <button class="btn btn-danger clickable-btn" data-bs-btn="danger" onclick="showBSButton('danger')">Danger</button>
+            <button class="btn btn-outline-info clickable-btn" data-bs-btn="outline" onclick="showBSButton('outline')">Outline</button>
+        </div>
+
+        <!-- Code Display -->
+        <div class="code-label mt-3">
+            <span class="effect-name">◈ <em>Bootstrap Button</em> &nbsp;·&nbsp; HTML</span>
+            <span>click a button ↴</span>
+        </div>
+        <pre id="buttonCode" class="code-block-highlight"><code>&lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;</code></pre>
+
+        <p class="explanation">
+            Bootstrap includes different button styles such as primary, secondary,
+            success, danger, and warning. These predefined styles save development
+            time and improve consistency across webpages.
+        </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 6. FORMS (UPDATED WITH VALIDATION) ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>6. Forms</h2>
+        <p class="explanation">
+            Forms are essential in websites because they allow users to enter
+            information such as login details, contact information, and search
+            queries. Bootstrap provides styled form components that improve appearance
+            and usability.
+        </p>
+
+        <pre id="formCode"><code>&lt;div class="mb-3"&gt;
+    &lt;label class="form-label"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" class="form-control"&gt;
+&lt;/div&gt;</code></pre>
+
+        <!-- Updated Form with IDs for validation -->
+        <form class="demo-form" id="bootstrapForm">
+            <label for="bootstrapName">Name</label>
+            <input type="text" id="bootstrapName" placeholder="Enter your name" />
+
+            <label for="bootstrapEmail">Email Address</label>
+            <input type="email" id="bootstrapEmail" placeholder="Enter your email" />
+
+            <label for="bootstrapMessage">Message</label>
+            <textarea id="bootstrapMessage" rows="4" placeholder="Write your message"></textarea>
+
+            <br /><br />
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <p class="explanation">
+            Bootstrap forms automatically include spacing, alignment, and responsive
+            styling, making forms easier to create and more user-friendly.
+        </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 7. UTILITY CLASSES ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>7. Bootstrap Utility Classes</h2>
+        <p class="explanation">
+            Bootstrap utility classes allow developers to quickly apply spacing,
+            alignment, colors, typography, borders, display settings, and sizing
+            without writing custom CSS.
+        </p>
+
+        <pre id="utilityCode"><code>&lt;div class="text-center p-4 bg-light"&gt;
+    Utility class example
+&lt;/div&gt;</code></pre>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Spacing</h3>
+                <p><code>m-3</code> adds margin and <code>p-3</code> adds padding.</p>
+            </div>
+            <div class="card">
+                <h3>Colors</h3>
+                <p><code>bg-primary</code> and <code>text-success</code> apply theme colors.</p>
+            </div>
+            <div class="card">
+                <h3>Borders</h3>
+                <p><code>border</code>, <code>rounded</code>, and <code>shadow-sm</code> style containers.</p>
+            </div>
+            <div class="card">
+                <h3>Alignment</h3>
+                <p><code>text-center</code> aligns text in the center.</p>
+            </div>
+            <div class="card">
+                <h3>Display</h3>
+                <p><code>d-flex</code> activates flexible layout controls.</p>
+            </div>
+        </div>
+
+        <p class="explanation">
+            Utility classes help developers build webpages faster and reduce the
+            amount of custom CSS required.
+        </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 8. SPACING AND ALIGNMENT ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>8. Spacing and Alignment</h2>
+        <p class="explanation">
+            Spacing and alignment are important in web design because they improve
+            readability and visual organization. Bootstrap includes spacing utilities
+            such as <code>m-3</code> for margin and <code>p-3</code> for padding.
+        </p>
+
+        <pre id="spacingCode"><code>&lt;div class="d-flex justify-content-center align-items-center"&gt;
+    Centered Content
+&lt;/div&gt;</code></pre>
+
+        <div class="flow">
+            <div>Margin</div>
+            <span>&rarr;</span>
+            <div>Padding</div>
+            <span>&rarr;</span>
+            <div>Flexbox</div>
+            <span>&rarr;</span>
+            <div>Alignment</div>
+        </div>
+
+        <p class="explanation">
+            Bootstrap's built-in spacing and alignment utilities simplify webpage
+            layout design.
+        </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 9. TYPOGRAPHY ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>Bootstrap CSS Typography</h2>
+        <p class="explanation">
+            Typography covers how text appears, including font size, weight, line
+            height, alignment, and emphasis. Bootstrap supports semantic HTML elements
+            and utility classes to quickly adjust text presentation.
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Element or Class</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>h1 to h6</code></td>
+                    <td>Heading levels from largest to smallest.</td>
+                </tr>
+                <tr>
+                    <td><code>.display-1 to .display-6</code></td>
+                    <td>Extra-large attention headings.</td>
+                </tr>
+                <tr>
+                    <td><code>.lead</code></td>
+                    <td>Makes a paragraph stand out.</td>
+                </tr>
+                <tr>
+                    <td><code>.fw-bold</code></td>
+                    <td>Applies bold font weight.</td>
+                </tr>
+                <tr>
+                    <td><code>.text-center</code></td>
+                    <td>Centers text.</td>
+                </tr>
+                <tr>
+                    <td><code>.text-uppercase</code></td>
+                    <td>Transforms text into uppercase.</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ===== 10. COMPONENT LIBRARY ===== -->
+    <!-- ================================================================ -->
+    <section class="overview">
+        <h2>Component Library Examples</h2>
+        <p class="explanation">
+            Bootstrap includes a wide component library. Developers can use components
+            such as navbars, dropdowns, buttons, cards, badges, alerts, and forms to
+            build professional interfaces more quickly.
+        </p>
+
+        <h3>Navbar with Search</h3>
+        <pre id="componentNavbarCode"><code>&lt;nav class="navbar bg-body-tertiary"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand"&gt;Navbar&lt;/a&gt;
+        &lt;form class="d-flex" role="search"&gt;
+            &lt;input class="form-control me-2" type="search" placeholder="Search"&gt;
+            &lt;button class="btn btn-outline-success" type="submit"&gt;Search&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+        <h3>Live Dropdown Example</h3>
+        <p class="explanation">
+            The dropdown below is fully functional thanks to Bootstrap's JavaScript bundle.
+        </p>
+
+        <div class="dropdown mb-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select an option
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+
+        <pre id="componentDropdownCode"><code>&lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"&gt;
+        Select an option
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+        <p class="explanation">
+            The dropdown component uses <code>.dropdown</code>,
+            <code>.dropdown-toggle</code>, and <code>.dropdown-menu</code>. Bootstrap
+            JavaScript enables the button to open and close the menu.
+        </p>
+    </section>
+
+    <!-- ===== 11. RESPONSIVE PORTFOLIO LAYOUT ===== -->
+    <section class="overview">
+        <h2>Example Demonstration - Responsive Portfolio Layout</h2>
+        <p class="explanation">
+            The main demonstration in this section is a responsive portfolio webpage
+            created using Bootstrap. The webpage contains a responsive navigation bar,
+            Bootstrap cards, buttons, grid-based layouts, responsive columns, and
+            styled forms.
+        </p>
+
+        <div class="container mt-4">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <h3>Responsive Columns</h3>
+                        <p>
+                            The layout stacks on small screens and becomes two columns on
+                            medium screens.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <h3>Mobile-Friendly Design</h3>
+                        <p>
+                            Bootstrap improves usability by adapting the page to different
+                            device sizes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="explanation">
+            Bootstrap classes were used to create the design quickly without writing
+            large amounts of CSS. The layout automatically adjusts to different screen
+            sizes, improving usability and accessibility.
+        </p>
+    </section>
+
+    <!-- ===== 12. EXPLANATION ===== -->
+    <section class="overview">
+        <h2>Explanation of the Demonstration</h2>
+        <p class="explanation">
+            Bootstrap was used to improve layout structure, responsiveness, spacing,
+            alignment, and visual appearance throughout the project. The Bootstrap
+            grid system organized content into responsive columns, while utility
+            classes simplified spacing and alignment.
+        </p>
+        <p class="explanation">
+            Navigation bars improved website usability, while cards and buttons
+            created clean and modern content sections. Bootstrap's responsive
+            breakpoints ensured the webpage adapted properly across mobile phones,
+            tablets, and desktop devices.
+        </p>
+        <p class="explanation">
+            Using Bootstrap significantly reduced development time because many
+            components and styles were already built into the framework.
+        </p>
+    </section>
+
+    <!-- ===== 13. ADVANTAGES ===== -->
+    <section class="overview">
+        <h2>Advantages of Bootstrap</h2>
+        <div class="references">
+            <div class="card">
+                <ul>
+                    <li>Faster webpage development</li>
+                    <li>Responsive design support</li>
+                    <li>Pre-designed components</li>
+                    <li>Consistent styling</li>
+                    <li>Cross-browser compatibility</li>
+                    <li>Easy customization</li>
+                    <li>Mobile-friendly layouts</li>
+                </ul>
+            </div>
+        </div>
+        <p class="explanation">
+            Bootstrap is especially useful for beginners because it simplifies many
+            complex CSS tasks.
+        </p>
+    </section>
+
+    <!-- ===== 14. CONCLUSION ===== -->
+    <section class="overview">
+        <h2>Conclusion</h2>
+        <p class="explanation">
+            Overall, Bootstrap is a powerful front-end framework that simplifies
+            responsive web design and webpage development. It allows developers to
+            create professional and visually attractive websites using pre-built
+            classes and components.
+        </p>
+        <p class="explanation">
+            Through these demonstrations, I developed a better understanding of
+            responsive design, grid systems, utility classes, navigation bars, cards,
+            forms, and Bootstrap components. I also learned how frameworks improve
+            development speed and maintain design consistency.
+        </p>
+        <p class="explanation">
+            The practical examples helped me understand how Bootstrap is used in
+            real-world web development projects to create responsive and user-friendly
+            websites.
+        </p>
+    </section>
+
+    <!-- ===== 15. REFERENCES ===== -->
+    <section class="overview">
+        <h2>References</h2>
+        <div class="references">
+            <div class="card">
+                <ul>
+                    <li>Bootstrap Official Documentation: https://getbootstrap.com</li>
+                    <li>W3Schools Bootstrap Tutorial: https://www.w3schools.com/bootstrap5/</li>
+                    <li>MDN Web Docs: https://developer.mozilla.org</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Full Stack Portfolio</h3>
+        <p>
+          Demonstrating comprehensive understanding of modern web development
+          technologies and best practices.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="fullstack.html">Full Stack Development</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a>
+        <a href="javascript.html">JavaScript</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>nayankhadka2020@gmail.com</p>
+        <p>Nayan Khadka</p>
+        <p>University of Sunderland</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>This portfolio is part of the CET138 Full Stack Development module at the University of Sunderland.</p>
+      <p>Created by Nayan Khadka, 2026.</p>
+      <p>&copy; 2026 Full Stack Development Portfolio.</p>
+    </div>
+  </footer>
+
+
+    <!-- ===== BOOTSTRAP JS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- ================================================================ -->
+    <!-- ===== INTERACTIVE JAVASCRIPT ===== -->
+    <!-- ================================================================ -->
+    <script>
+        // ──────────────────────────────────────────────
+        // 1. GRID SYSTEM – switch column layouts
+        // ──────────────────────────────────────────────
+        function setBSGrid(mode) {
+            const row = document.getElementById('gridRow');
+            // Remove all column classes
+            row.querySelectorAll('.grid-col').forEach(col => {
+                col.className = 'grid-col';
+            });
+
+            // Add the appropriate column classes
+            const cols = row.querySelectorAll('.grid-col');
+            if (mode === 'two') {
+                cols.forEach(c => c.classList.add('col-md-6'));
+            } else if (mode === 'three') {
+                cols.forEach(c => c.classList.add('col-md-4'));
+            } else if (mode === 'four') {
+                cols.forEach(c => c.classList.add('col-md-6', 'col-lg-3'));
+            } else if (mode === 'six') {
+                cols.forEach(c => c.classList.add('col-4', 'col-md-2'));
+            }
+
+            // Update button active states
+            document.querySelectorAll('.demo-controls .btn-outline-bs').forEach(btn => btn.classList.remove('active-btn'));
+            document.querySelector(`.demo-controls .btn-outline-bs[onclick="setBSGrid('${mode}')"]`)?.classList.add(
+                'active-btn');
+
+            // Update code display
+            const codeDisplay = document.querySelector('#gridCode code');
+            const gridCodeMap = {
+                two: `<div class="row g-3">\n    <div class="col-md-6">Col 1</div>\n    <div class="col-md-6">Col 2</div>\n    <div class="col-md-6">Col 3</div>\n    <div class="col-md-6">Col 4</div>\n</div>`,
+                three: `<div class="row g-3">\n    <div class="col-md-4">Col 1</div>\n    <div class="col-md-4">Col 2</div>\n    <div class="col-md-4">Col 3</div>\n    <div class="col-md-4">Col 4</div>\n</div>`,
+                four: `<div class="row g-3">\n    <div class="col-md-6 col-lg-3">Col 1</div>\n    <div class="col-md-6 col-lg-3">Col 2</div>\n    <div class="col-md-6 col-lg-3">Col 3</div>\n    <div class="col-md-6 col-lg-3">Col 4</div>\n</div>`,
+                six: `<div class="row g-3">\n    <div class="col-4 col-md-2">Col 1</div>\n    <div class="col-4 col-md-2">Col 2</div>\n    <div class="col-4 col-md-2">Col 3</div>\n    <div class="col-4 col-md-2">Col 4</div>\n</div>`
+            };
+            if (gridCodeMap[mode]) codeDisplay.textContent = gridCodeMap[mode];
+        }
+
+        // ──────────────────────────────────────────────
+        // 2. CARDS – show card code on click
+        // ──────────────────────────────────────────────
+        function showBSCard(type) {
+            // Remove active class from all cards
+            document.querySelectorAll('.clickable-card').forEach(c => c.classList.remove('active-card'));
+            // Add active class to clicked card
+            const cardEl = document.querySelector(`.clickable-card[data-bs-card="${type}"]`);
+            if (cardEl) cardEl.classList.add('active-card');
+
+            const codeDisplay = document.querySelector('#cardCode code');
+            const cardCodeMap = {
+                portfolio: `<div class="card" style="width: 18rem;">\n    <div class="card-body">\n        <h5 class="card-title">Portfolio Card</h5>\n        <p class="card-text">This card can be used to display a project in a portfolio.</p>\n        <a href="#" class="btn btn-primary">View Project</a>\n    </div>\n</div>`,
+                blog: `<div class="card" style="width: 18rem;">\n    <div class="card-body">\n        <h5 class="card-title">Blog Card</h5>\n        <p class="card-text">This card can organize blog content in a clean layout.</p>\n        <a href="#" class="btn btn-secondary">Read More</a>\n    </div>\n</div>`,
+                product: `<div class="card" style="width: 18rem;">\n    <div class="card-body">\n        <h5 class="card-title">Product Card</h5>\n        <p class="card-text">This card can be used in online shopping websites.</p>\n        <a href="#" class="btn btn-success">Learn More</a>\n    </div>\n</div>`
+            };
+            if (cardCodeMap[type]) codeDisplay.textContent = cardCodeMap[type];
+        }
+
+        // ──────────────────────────────────────────────
+        // 3. BUTTONS – show button code on click
+        // ──────────────────────────────────────────────
+        function showBSButton(type) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.clickable-btn').forEach(b => b.classList.remove('active-btn'));
+            // Add active class to clicked button
+            const btnEl = document.querySelector(`.clickable-btn[data-bs-btn="${type}"]`);
+            if (btnEl) btnEl.classList.add('active-btn');
+
+            const codeDisplay = document.querySelector('#buttonCode code');
+            const btnCodeMap = {
+                primary: `<button class="btn btn-primary">Primary Button</button>`,
+                secondary: `<button class="btn btn-secondary">Secondary Button</button>`,
+                success: `<button class="btn btn-success">Success Button</button>`,
+                warning: `<button class="btn btn-warning">Warning Button</button>`,
+                danger: `<button class="btn btn-danger">Danger Button</button>`,
+                outline: `<button class="btn btn-outline-info">Outline Button</button>`
+            };
+            if (btnCodeMap[type]) codeDisplay.textContent = btnCodeMap[type];
+        }
+
+        // ──────────────────────────────────────────────
+        // 4. FORM VALIDATION
+        // ──────────────────────────────────────────────
+        document.addEventListener('DOMContentLoaded', function() {
+            // Default grid: 2 columns
+            setBSGrid('two');
+            // Default card: portfolio
+            showBSCard('portfolio');
+            // Default button: primary
+            showBSButton('primary');
+
+            // ── Form validation logic ──
+            const form = document.getElementById('bootstrapForm');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent page reload
+
+                // Get input values and trim whitespace
+                const name = document.getElementById('bootstrapName').value.trim();
+                const email = document.getElementById('bootstrapEmail').value.trim();
+
+                // 1. Name Validation: Only alphabets and spaces allowed
+                const nameRegex = /^[A-Za-z\s]+$/;
+                if (!nameRegex.test(name)) {
+                    alert('Invalid name, characters not allowed');
+                    return; // Stop execution
+                }
+
+                // 2. Email Validation: Must end with @gmail.com
+                if (!email.endsWith('@gmail.com')) {
+                    alert('Invalid email');
+                    return; // Stop execution
+                }
+
+                // 3. Success
+                alert('Thank you! Message received');
+                form.reset(); // Clear the form after successful submission
+            });
+        });
+    </script>
+
+</body>
+</html>

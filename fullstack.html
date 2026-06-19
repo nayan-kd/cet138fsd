@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Development</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>CET138 Portfolio</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fullstack.html">Full Stack</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="bootstrap.html">Bootstrap</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>What Is Full Stack Development?</h2>
+      <p>
+        Full stack development is the process of building both the front-end and
+        back-end parts of a website or web application. A full stack developer
+        works on the visible parts users interact with and the hidden systems
+        that run behind the scenes, such as servers, databases, APIs, testing,
+        security, and deployment.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>Full Stack Overview</h2>
+      <p class="explanation">
+        Full stack development is important in modern web development because
+        companies often need developers who understand the complete development
+        process. A full stack developer can move between user interface design,
+        application logic, data management, and deployment, which helps projects
+        become more connected and efficient.
+      </p>
+    </section>
+
+    <section class="overview">
+  <h2>Full Stack Architecture Diagram</h2>
+  <p class="explanation">
+    A full stack application is made of connected layers. Each layer has a
+    specific job and passes information to the next part of the system.
+  </p>
+
+  <div class="flow">
+    <div>Browser</div>
+    <span>→</span>
+    <div>HTML/CSS/JS</div>
+    <span>→</span>
+    <div>API</div>
+    <span>→</span>
+    <div>Node.js</div>
+    <span>→</span>
+    <div>MongoDB</div>
+  </div>
+</section>
+
+    <section class="overview">
+      <h2>How Full Stack Development Works</h2>
+      <p class="explanation">
+        A full stack application works by connecting the client side, server
+        side, database, and APIs. The user interacts with the front end, the
+        browser sends requests to the server, the server handles the logic, and
+        the database stores or retrieves information.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>Detailed Understanding</h2>
+
+      <div class="fullstack-detail-list">
+        <article class="card">
+          <h3>Understanding Front-End Development</h3>
+          <p>
+            Front-end development focuses on the part of an application that
+            users directly interact with. This includes webpages, navigation
+            bars, buttons, forms, images, layouts, and interactive content.
+          </p>
+          <p>
+            HTML structures the content, CSS controls the visual design, and
+            JavaScript adds behaviour and interactivity. Frameworks such as
+            Bootstrap and React can also speed up development and improve the
+            user experience across phones, tablets, and computers.
+          </p>
+
+          <div class="product-demo small-product-demo">
+  <div class="product-image small-product-image">
+    <img src="https://www.beatsbydre.com/content/dam/beats/web/product/headphones/solo4-wireless/pdp/product-carousel/cloud-pink/pink-01-solo4.jpg.large.2x.jpg" alt="Pink wireless headphones">
+  </div>
+  <h4>Wireless Headphones</h4>
+  <p class="product-price">£39.99</p>
+  <button type="button" class="btn">Add to Cart</button>
+</div>
+        </article>
+
+        <article class="card">
+          <h3>Understanding Back-End Development</h3>
+          <p>
+            Back-end development is the server-side part of an application that
+            users do not usually see. It processes data, manages user accounts,
+            handles requests, checks permissions, and communicates with
+            databases.
+          </p>
+          <p>
+            For example, when a user logs in, submits a form, or places an
+            online order, the back end receives the request, performs the
+            required logic, and sends a response back to the front end.
+          </p>
+
+          <div class="backend-code-box">
+            <h4>Back-End Example Code</h4>
+            <pre><code>const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+app.post('/api/users', async (req, res) =&gt; {
+  const { email, password } = req.body;
+  const user = { id: 'u_123', email };
+
+  res.status(201).json(user);
+});
+
+app.listen(3000, () =&gt; {
+  console.log('API running on port 3000');
+});</code></pre>
+          </div>
+        </article>
+
+        <article class="card">
+  <h3>Database Management</h3>
+  <p>
+    A database stores organised information that a full stack application can
+    create, read, update, and delete.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John Smith</td>
+        <td>john@email.com</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sarah Jones</td>
+        <td>sarah@email.com</td>
+      </tr>
+    </table>
+  </div>
+
+  <p>
+    This data could be stored inside a MySQL database and retrieved when users
+    log into the website.
+  </p>
+</article>
+
+        <article class="card">
+          <h3>Responsibilities Of A Full Stack Developer</h3>
+          <p>
+            A full stack developer may design webpages, write application logic,
+            connect databases, test features, fix bugs, improve performance,
+            and work with APIs.
+          </p>
+          <p>
+            Because they can contribute to both front-end and back-end
+            development, full stack developers are flexible and useful in teams.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Example Request Flow</h2>
+
+      <div class="flow">
+        <div>User fills in a form</div>
+        <span>→</span>
+        <div>JavaScript checks input</div>
+        <span>→</span>
+        <div>Server processes request</div>
+        <span>→</span>
+        <div>Database stores data</div>
+        <span>→</span>
+        <div>Response shown to user</div>
+      </div>
+
+      <section class="overview">
+  <h2>Real Login Form Example</h2>
+  <p class="explanation">
+    A login form is a common full stack feature because it connects the user
+    interface, JavaScript, an API, server validation, and a database.
+  </p>
+
+  <form class="demo-form">
+    <label for="login-email">Email</label>
+    <input type="email" id="login-email" placeholder="student@email.com">
+
+    <label for="login-password">Password</label>
+    <input type="password" id="login-password" placeholder="Enter password">
+
+    <button class="btn" type="button">Login</button>
+  </form>
+
+  <div class="flow">
+    <div>User enters credentials</div>
+    <span>→</span>
+    <div>API request sent</div>
+    <span>→</span>
+    <div>Server validates</div>
+    <span>→</span>
+    <div>Database checked</div>
+    <span>→</span>
+    <div>Access granted</div>
+  </div>
+</section>
+
+      <p class="explanation">
+        This example shows how the different layers of a full stack application
+        work together. The front end collects user input, JavaScript can validate
+        it, the server handles the request, and the database stores or retrieves
+        the information before a response is shown to the user.
+      </p>
+    </section>
+
+  <section class="overview wide-box-section">
+  <h2>Code Showcase: Front End To Back End Request</h2>
+
+  <div class="cards wide-square-grid">
+    <article class="card">
+      <h3>Front-End Fetch API</h3>
+      <p>A form can collect user details and send them to an API as JSON.</p>
+
+      <pre><code>const form = document.querySelector('#signup');
+
+form.addEventListener('submit', async (event) =&gt; {
+  event.preventDefault();
+
+  const payload = {
+    email: form.email.value,
+    password: form.password.value
+  };
+
+  const response = await fetch('/api/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+
+  const data = await response.json();
+  console.log('Created user:', data);
+});</code></pre>
+
+      <p>
+        This shows event handling, preventing the default form action,
+        sending JSON, and reading a JSON response.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Back-End Express API</h3>
+      <p>The server receives the request, handles the data, and returns a response.</p>
+
+      <pre><code>const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+app.post('/api/users', async (req, res) =&gt; {
+  const { email, password } = req.body;
+  const user = { id: 'u_123', email };
+
+  res.status(201).json(user);
+});
+
+app.listen(3000, () =&gt; {
+  console.log('API running on port 3000');
+});</code></pre>
+
+      <p>
+        A real application would also validate input, hash passwords, save
+        to a database, and handle errors securely.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="overview">
+  <h2>Full Stack Learning Roadmap</h2>
+  <p class="explanation">
+    Full stack learning is easier when the skills are studied in a clear order,
+    starting from page structure and ending with deployment.
+  </p>
+
+  <div class="flow">
+    <div>HTML</div>
+    <span>→</span>
+    <div>CSS</div>
+    <span>→</span>
+    <div>JavaScript</div>
+    <span>→</span>
+    <div>APIs</div>
+    <span>→</span>
+    <div>Node.js</div>
+    <span>→</span>
+    <div>Databases</div>
+    <span>→</span>
+    <div>Deployment</div>
+  </div>
+</section>
+
+<section class="overview">
+  <h2>Fake API Response Example</h2>
+  <p class="explanation">
+    APIs often return data in JSON format. The front end receives this JSON from
+    the server and displays it to users.
+  </p>
+
+  <pre><code>{
+  "id": 101,
+  "name": "Wireless Headphones",
+  "price": 39.99,
+  "stock": 20
+}</code></pre>
+
+  <p>
+    In a real application, this product data could come from a database and be
+    shown inside a product card on the website.
+  </p>
+</section>
+
+  <div class="flow">
+    <div>HTML</div>
+    <span>→</span>
+    <div>CSS</div>
+    <span>→</span>
+    <div>JavaScript</div>
+    <span>→</span>
+    <div>APIs</div>
+    <span>→</span>
+    <div>Node.js</div>
+    <span>→</span>
+    <div>Databases</div>
+    <span>→</span>
+    <div>Deployment</div>
+  </div>
+</section>
+    </section>
+
+    <section class="overview">
+  <h2>Developer Tools Used In Full Stack Development</h2>
+  <p class="explanation">
+    Full stack developers use different tools to write code, test APIs, manage
+    versions, inspect databases, and deploy applications.
+  </p>
+
+  <div class="cards">
+    <article class="card">
+      <h3>VS Code</h3>
+      <p>Used for writing, editing, and organising project code.</p>
+    </article>
+
+    <article class="card">
+      <h3>Git</h3>
+      <p>Used for tracking code changes and managing project versions.</p>
+    </article>
+
+    <article class="card">
+      <h3>GitHub</h3>
+      <p>Used for storing code online and collaborating with other developers.</p>
+    </article>
+
+    <article class="card">
+      <h3>Postman</h3>
+      <p>Used for testing APIs and viewing server responses.</p>
+    </article>
+
+    <article class="card">
+      <h3>MongoDB Compass</h3>
+      <p>Used for viewing and managing MongoDB database collections.</p>
+    </article>
+
+    <article class="card">
+      <h3>Docker</h3>
+      <p>Used for packaging applications so they can run consistently in different environments.</p>
+    </article>
+  </div>
+</section>
+
+    <section class="overview">
+      <section class="overview">
+  <h2>Popular Full Stack Technologies</h2>
+  <p class="explanation">
+    Different technology stacks combine front-end, back-end, and database tools.
+    The best stack depends on the project requirements.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <tr>
+        <th>Stack</th>
+        <th>Front End</th>
+        <th>Back End</th>
+        <th>Database</th>
+      </tr>
+      <tr>
+        <td>MERN</td>
+        <td>React</td>
+        <td>Node.js and Express</td>
+        <td>MongoDB</td>
+      </tr>
+      <tr>
+        <td>MEAN</td>
+        <td>Angular</td>
+        <td>Node.js and Express</td>
+        <td>MongoDB</td>
+      </tr>
+      <tr>
+        <td>LAMP</td>
+        <td>HTML, CSS, JavaScript</td>
+        <td>PHP and Apache</td>
+        <td>MySQL</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section class="overview">
+  <h2>Full Stack Project Showcase</h2>
+
+  <article class="card">
+    <h3>Food Delivery App</h3>
+    <p class="explanation">
+      A food delivery app is a good example of full stack development because
+      it needs a user interface, server-side logic, database storage, and API
+      communication.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Backend</h3>
+        <ul>
+          <li>Node.js</li>
+          <li>Express</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Database</h3>
+        <ul>
+          <li>MongoDB</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Features</h3>
+        <ul>
+          <li>User Login</li>
+          <li>Cart System</li>
+          <li>Order Tracking</li>
+        </ul>
+      </article>
+    </div>
+  </article>
+</section>
+
+      <section class="overview advantages-section">
+  <h2>Advantages And Challenges</h2>
+
+  <div class="cards advantages-grid">
+    <article class="card">
+      <h3>Advantages</h3>
+      <ul>
+        <li>Full stack developers can work on different parts of a project.</li>
+        <li>They can improve communication between front-end and back-end work.</li>
+        <li>They can reduce development costs for smaller teams or projects.</li>
+        <li>They can understand the complete system and find issues faster.</li>
+        <li>They can build applications more efficiently because they understand how each layer connects.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Challenges</h3>
+      <ul>
+        <li>Full stack developers need to learn many technologies.</li>
+        <li>They must keep up with changing frameworks, languages, and tools.</li>
+        <li>They need awareness of front-end design, back-end logic, databases, APIs, security, and deployment.</li>
+        <li>Large projects can become difficult to manage without teamwork and clear structure.</li>
+        <li>Security and performance require continuous testing and improvement.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+    </section>
+
+    <section class="overview">
+  <h2>Why APIs Are Important</h2>
+
+  <p class="explanation">
+    APIs allow the client and server to communicate without being tightly
+    connected. A client builds a request with a URL, method, headers, and body.
+    The server receives it, checks authentication, runs business logic, accesses
+    data if needed, and returns a structured response.
+  </p>
+
+  <div class="flow">
+    <div>Frontend Button Click</div>
+    <span>→</span>
+    <div>API Request</div>
+    <span>→</span>
+    <div>Server Logic</div>
+    <span>→</span>
+    <div>Database Query</div>
+    <span>→</span>
+    <div>JSON Response</div>
+    <span>→</span>
+    <div>Page Updates</div>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Example API Request</h3>
+      <pre><code>fetch('/api/products/101')
+  .then(response =&gt; response.json())
+  .then(product =&gt; {
+    console.log(product.name);
+    console.log(product.price);
+  });</code></pre>
+    </article>
+
+    <article class="card">
+      <h3>Example API Response</h3>
+      <pre><code>{
+  "id": 101,
+  "name": "Wireless Headphones",
+  "price": 39.99,
+  "stock": 20
+}</code></pre>
+    </article>
+  </div>
+
+  <p>
+    In this example, the front end asks the API for product information. The
+    server finds the product data and sends it back as JSON, then JavaScript can
+    display the product name, price, and stock on the page.
+  </p>
+</section>
+
+    <section class="overview">
+      <h2>Conclusion</h2>
+      <p class="explanation">
+        Full stack development combines front-end development, back-end
+        development, and database management to create complete web
+        applications. A full stack developer is valuable because they understand
+        how the user interface, server logic, APIs, and data layer work
+        together. As businesses continue to rely on digital platforms, full
+        stack development remains an important skill in modern web development.
+      </p>
+
+      <div class="card references">
+        <h3>Sources Used For Research</h3>
+        <p>
+          AWS, Coursera, MDN Web Docs, IBM, Oracle, GeeksforGeeks, and
+          Simplilearn.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Full Stack Portfolio</h3>
+        <p>
+          Demonstrating comprehensive understanding of modern web development
+          technologies and best practices.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="fullstack.html">Full Stack Development</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a>
+        <a href="javascript.html">JavaScript</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>kit25c.nyn@ismt.edu.np</p>
+        <p>Nayan Khadka</p>
+        <p>University of Sunderland</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>This portfolio is part of the CET138 Full Stack Development module at the University of Sunderland.</p>
+      <p>Created by Nayan Khadka, 2026.</p>
+      <p>&copy; 2026 Full Stack Development Portfolio.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

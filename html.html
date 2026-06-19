@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML</title>
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>CET138 Portfolio</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fullstack.html">Full Stack</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="bootstrap.html">Bootstrap</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>HTML: HyperText Markup Language</h2>
+      <p>
+        HTML is the standard markup language used to create webpages and
+        structure content on the internet. It forms the foundation of every
+        website by organising text, images, links, forms, tables, and
+        multimedia into a format that browsers can display.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>What Is HTML?</h2>
+      <p class="explanation">
+        HTML uses elements and tags to define different parts of a webpage,
+        such as headings, paragraphs, buttons, images, links, forms, and
+        navigation menus. It gives content meaning and structure, while CSS
+        controls the appearance and JavaScript adds interactivity.
+      </p>
+      <p class="explanation">
+        Modern web development relies on HTML because it helps developers create
+        organised, accessible, and browser-compatible webpages that work across
+        phones, tablets, laptops, and desktop computers.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>Structure Of An HTML Document</h2>
+      <p class="explanation">
+        Every HTML document follows a basic structure. The
+        <code>&lt;head&gt;</code> contains metadata and links to resources, while
+        the <code>&lt;body&gt;</code> contains the visible content users see on
+        the page.
+      </p>
+
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;Site header&lt;/header&gt;
+    &lt;main&gt;
+      &lt;h1&gt;Hello, world!&lt;/h1&gt;
+      &lt;p&gt;Page content goes here.&lt;/p&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;Site footer&lt;/footer&gt;
+    &lt;script src="js/script.js" defer&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>Boilerplate Explanation</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>DOCTYPE</h3>
+          <p>
+            <code>&lt;!DOCTYPE html&gt;</code> tells the browser to use modern
+            standards mode when rendering the page.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>HTML Element</h3>
+          <p>
+            <code>&lt;html lang="en"&gt;</code> is the root element. The
+            <code>lang</code> attribute supports accessibility and search
+            engines by declaring the page language.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Head Section</h3>
+          <p>
+            The <code>&lt;head&gt;</code> stores metadata, the page title,
+            character encoding, viewport settings, and stylesheet links.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Body Section</h3>
+          <p>
+            The <code>&lt;body&gt;</code> contains all visible webpage content,
+            including headings, paragraphs, images, buttons, forms, and links.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>External Files</h3>
+          <p>
+            HTML can connect to CSS using <code>&lt;link&gt;</code> and to
+            JavaScript using <code>&lt;script&gt;</code>, allowing structure,
+            design, and behaviour to work together.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="overview">
+  <h2>HTML Elements</h2>
+  <p class="explanation">
+    An HTML element usually has an opening tag, content, and a closing tag.
+    Elements define both structure and meaning. Below is a quick reference of
+    common elements in alphabetical order.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;a&gt;</code></td><td>Hyperlink to another resource or location on the page.</td></tr>
+        <tr><td><code>&lt;abbr&gt;</code></td><td>Abbreviation or acronym with optional expansion.</td></tr>
+        <tr><td><code>&lt;address&gt;</code></td><td>Contact information for a person or organization.</td></tr>
+        <tr><td><code>&lt;article&gt;</code></td><td>Self-contained content such as a blog post or news item.</td></tr>
+        <tr><td><code>&lt;aside&gt;</code></td><td>Sidebar or tangentially related content.</td></tr>
+        <tr><td><code>&lt;audio&gt;</code></td><td>Embeds audio with playback controls.</td></tr>
+        <tr><td><code>&lt;b&gt;</code></td><td>Stylistically offset text without added importance.</td></tr>
+        <tr><td><code>&lt;body&gt;</code></td><td>All visible content of the document.</td></tr>
+        <tr><td><code>&lt;br&gt;</code></td><td>Line break, which is a void element.</td></tr>
+        <tr><td><code>&lt;button&gt;</code></td><td>Clickable button such as submit, reset, or generic.</td></tr>
+        <tr><td><code>&lt;canvas&gt;</code></td><td>Scriptable bitmap drawing surface.</td></tr>
+        <tr><td><code>&lt;caption&gt;</code></td><td>Table caption or title.</td></tr>
+        <tr><td><code>&lt;cite&gt;</code></td><td>Title of a creative work.</td></tr>
+        <tr><td><code>&lt;code&gt;</code></td><td>Inline code fragment.</td></tr>
+        <tr><td><code>&lt;data&gt;</code></td><td>Associates content with a machine-readable value.</td></tr>
+        <tr><td><code>&lt;datalist&gt;</code></td><td>Provides suggested options for inputs.</td></tr>
+        <tr><td><code>&lt;dd&gt;</code></td><td>Description or details in a description list.</td></tr>
+        <tr><td><code>&lt;del&gt;</code></td><td>Deleted or removed text.</td></tr>
+        <tr><td><code>&lt;details&gt;</code></td><td>Disclosure widget for show and hide content.</td></tr>
+        <tr><td><code>&lt;dfn&gt;</code></td><td>Defines a term being introduced.</td></tr>
+        <tr><td><code>&lt;dialog&gt;</code></td><td>Dialog box or modal.</td></tr>
+        <tr><td><code>&lt;div&gt;</code></td><td>Generic block container.</td></tr>
+        <tr><td><code>&lt;dl&gt;</code></td><td>Description list container.</td></tr>
+        <tr><td><code>&lt;dt&gt;</code></td><td>Term or name in a description list.</td></tr>
+        <tr><td><code>&lt;em&gt;</code></td><td>Emphasized text with stress emphasis.</td></tr>
+        <tr><td><code>&lt;embed&gt;</code></td><td>Embeds external content.</td></tr>
+        <tr><td><code>&lt;fieldset&gt;</code></td><td>Groups related form controls.</td></tr>
+        <tr><td><code>&lt;figcaption&gt;</code></td><td>Caption for a figure.</td></tr>
+        <tr><td><code>&lt;figure&gt;</code></td><td>Illustration or media with a caption.</td></tr>
+        <tr><td><code>&lt;footer&gt;</code></td><td>Footer of a section or page.</td></tr>
+        <tr><td><code>&lt;form&gt;</code></td><td>Collects and submits user input.</td></tr>
+        <tr><td><code>&lt;h1&gt;...&lt;h6&gt;</code></td><td>Headings level 1, highest, to 6, lowest.</td></tr>
+        <tr><td><code>&lt;head&gt;</code></td><td>Document metadata container.</td></tr>
+        <tr><td><code>&lt;header&gt;</code></td><td>Introductory content for a section or page.</td></tr>
+        <tr><td><code>&lt;hr&gt;</code></td><td>Thematic break.</td></tr>
+        <tr><td><code>&lt;html&gt;</code></td><td>Root element of the document.</td></tr>
+        <tr><td><code>&lt;i&gt;</code></td><td>Alternate voice or mood, often italic.</td></tr>
+        <tr><td><code>&lt;iframe&gt;</code></td><td>Embeds another HTML page.</td></tr>
+        <tr><td><code>&lt;img&gt;</code></td><td>Embeds an image.</td></tr>
+        <tr><td><code>&lt;input&gt;</code></td><td>Form control such as text, email, or checkbox.</td></tr>
+        <tr><td><code>&lt;label&gt;</code></td><td>Caption or label for a form control.</td></tr>
+        <tr><td><code>&lt;legend&gt;</code></td><td>Caption for a fieldset.</td></tr>
+        <tr><td><code>&lt;li&gt;</code></td><td>List item.</td></tr>
+        <tr><td><code>&lt;link&gt;</code></td><td>Links external resources in the head section.</td></tr>
+        <tr><td><code>&lt;main&gt;</code></td><td>Primary content of the page.</td></tr>
+        <tr><td><code>&lt;meta&gt;</code></td><td>Metadata such as charset, viewport, or description.</td></tr>
+        <tr><td><code>&lt;nav&gt;</code></td><td>Navigation links section.</td></tr>
+        <tr><td><code>&lt;noscript&gt;</code></td><td>Shown when JavaScript is disabled.</td></tr>
+        <tr><td><code>&lt;object&gt;</code></td><td>Generic embedded object.</td></tr>
+        <tr><td><code>&lt;ol&gt;</code></td><td>Ordered numbered list.</td></tr>
+        <tr><td><code>&lt;option&gt;</code></td><td>Option in a select menu.</td></tr>
+        <tr><td><code>&lt;p&gt;</code></td><td>Paragraph.</td></tr>
+        <tr><td><code>&lt;picture&gt;</code></td><td>Responsive images with multiple sources.</td></tr>
+        <tr><td><code>&lt;pre&gt;</code></td><td>Preformatted text that preserves whitespace.</td></tr>
+        <tr><td><code>&lt;progress&gt;</code></td><td>Progress indicator.</td></tr>
+        <tr><td><code>&lt;q&gt;</code></td><td>Inline quotation.</td></tr>
+        <tr><td><code>&lt;script&gt;</code></td><td>Embeds or references JavaScript.</td></tr>
+        <tr><td><code>&lt;section&gt;</code></td><td>Thematic grouping of content.</td></tr>
+        <tr><td><code>&lt;select&gt;</code></td><td>Drop-down list.</td></tr>
+        <tr><td><code>&lt;small&gt;</code></td><td>Fine print or side comments.</td></tr>
+        <tr><td><code>&lt;span&gt;</code></td><td>Generic inline container.</td></tr>
+        <tr><td><code>&lt;strong&gt;</code></td><td>Important text, typically bold.</td></tr>
+        <tr><td><code>&lt;style&gt;</code></td><td>CSS rules inside the document.</td></tr>
+        <tr><td><code>&lt;sub&gt;</code></td><td>Subscript.</td></tr>
+        <tr><td><code>&lt;sup&gt;</code></td><td>Superscript.</td></tr>
+        <tr><td><code>&lt;table&gt;</code></td><td>Table of data.</td></tr>
+        <tr><td><code>&lt;tbody&gt;</code></td><td>Table body group.</td></tr>
+        <tr><td><code>&lt;td&gt;</code></td><td>Table data cell.</td></tr>
+        <tr><td><code>&lt;template&gt;</code></td><td>HTML that is not rendered until used.</td></tr>
+        <tr><td><code>&lt;textarea&gt;</code></td><td>Multiline text input.</td></tr>
+        <tr><td><code>&lt;tfoot&gt;</code></td><td>Table footer group.</td></tr>
+        <tr><td><code>&lt;th&gt;</code></td><td>Table header cell.</td></tr>
+        <tr><td><code>&lt;thead&gt;</code></td><td>Table header group.</td></tr>
+        <tr><td><code>&lt;time&gt;</code></td><td>Machine-readable time or date.</td></tr>
+        <tr><td><code>&lt;title&gt;</code></td><td>Document title shown in the browser tab.</td></tr>
+        <tr><td><code>&lt;tr&gt;</code></td><td>Table row.</td></tr>
+        <tr><td><code>&lt;u&gt;</code></td><td>Unarticulated annotation, usually underline.</td></tr>
+        <tr><td><code>&lt;ul&gt;</code></td><td>Unordered bulleted list.</td></tr>
+        <tr><td><code>&lt;video&gt;</code></td><td>Embeds video with controls.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+    <section class="overview">
+      <h2>Semantic HTML</h2>
+      <p class="explanation">
+        Semantic HTML means using meaningful tags that describe the purpose of
+        the content. Examples include <code>&lt;header&gt;</code>,
+        <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+        <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and
+        <code>&lt;footer&gt;</code>.
+      </p>
+
+      <pre><code>&lt;header&gt;
+  &lt;nav&gt;Main navigation&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Article Title&lt;/h2&gt;
+      &lt;p&gt;Independent content goes here.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;Copyright and contact information&lt;/footer&gt;</code></pre>
+
+      <p class="explanation">
+        Semantic HTML improves accessibility, search engine optimisation, code
+        readability, and website organisation because both humans and browsers
+        can understand the role of each section.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>HTML Attributes</h2>
+      <p class="explanation">
+        Attributes provide extra information about HTML elements. They appear in
+        the opening tag as name-value pairs, such as
+        <code>href="index.html"</code> or <code>class="card"</code>.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Used With</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>href</code></td>
+              <td><code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></td>
+              <td>Defines the target URL for a link or external resource.</td>
+            </tr>
+            <tr>
+              <td><code>src</code></td>
+              <td><code>&lt;img&gt;</code>, <code>&lt;script&gt;</code></td>
+              <td>Defines the file or resource to load.</td>
+            </tr>
+            <tr>
+              <td><code>alt</code></td>
+              <td><code>&lt;img&gt;</code></td>
+              <td>Provides alternative text for images and supports screen readers.</td>
+            </tr>
+            <tr>
+              <td><code>id</code></td>
+              <td>Global</td>
+              <td>Gives an element a unique identifier.</td>
+            </tr>
+            <tr>
+              <td><code>class</code></td>
+              <td>Global</td>
+              <td>Assigns class names for CSS styling and JavaScript selection.</td>
+            </tr>
+            <tr>
+              <td><code>type</code></td>
+              <td><code>&lt;input&gt;</code>, <code>&lt;button&gt;</code></td>
+              <td>Defines the input or button behaviour.</td>
+            </tr>
+            <tr>
+              <td><code>required</code></td>
+              <td>Form controls</td>
+              <td>Makes a form field mandatory before submission.</td>
+            </tr>
+            <tr>
+              <td><code>for</code></td>
+              <td><code>&lt;label&gt;</code></td>
+              <td>Connects a label to a form control using the control's ID.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="overview">
+  <h2>Navigation Menu Example</h2>
+  <p class="explanation">
+    HTML is used to create the structure of website navigation. The
+    <code>&lt;nav&gt;</code> element identifies the navigation area, while
+    <code>&lt;a&gt;</code> elements create clickable links.
+  </p>
+
+  <nav class="html-demo-nav">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <p class="explanation">
+    This example helps users move around a website. Navigation menus are used on
+    almost every webpage because they organise links clearly and improve the user
+    experience.
+  </p>
+
+  <pre><code>&lt;nav&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;Products&lt;/a&gt;
+  &lt;a href="#"&gt;Services&lt;/a&gt;
+  &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+</section>
+
+<section class="overview">
+  <h2>News Article Layout Example</h2>
+  <p class="explanation">
+    Semantic HTML can be used to structure a news article clearly. This helps
+    browsers, search engines, screen readers, and developers understand the page
+    content.
+  </p>
+
+  <article class="card">
+   <section class="overview">
+  <h2>News Article Layout Example</h2>
+
+  <p class="explanation">
+    Semantic HTML can be be used to structure a news article clearly. This helps
+    browsers, search engines, screen readers, and developers understand the page
+    content and improve accessibility.
+  </p>
+
+  <article class="card">
+
+    <div class="article-header">
+    <h3>AI Technology Set to Transform Web Development</h3>
+    <p>
+        By <strong>Nayan Khadka</strong> |
+        <time datetime="2026-06-18">18 June 2026</time>
+    </p>
+</div>
+
+    <section>
+      <h4>Breakthrough Announcement</h4>
+      <p>
+        Researchers have developed a new artificial intelligence system that
+        assists web developers by improving testing, debugging, and code
+        suggestions. The technology aims to reduce development time while
+        improving software quality.
+      </p>
+    </section>
+
+    <section>
+      <h4>Industry Impact</h4>
+      <p>
+        Experts believe the new tool could significantly increase productivity
+        within the technology sector. Companies are expected to adopt AI-assisted
+        development workflows to automate repetitive coding tasks and identify
+        software issues more efficiently.
+      </p>
+
+      <blockquote>
+        "AI will not replace developers, but developers who use AI may have a
+        significant advantage in the future."
+      </blockquote>
+    </section>
+
+    <section>
+      <h4>Future Developments</h4>
+      <p>
+        The research team plans to expand the system's capabilities by adding
+        support for multiple programming languages and integrating advanced
+        cybersecurity testing features. A public beta release is expected later
+        this year.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        <strong>Category:</strong> Technology News |
+        <strong>Source:</strong> CET138 HTML Demonstration
+      </p>
+    </footer>
+
+  </article>
+
+  <pre><code>&lt;article&gt;
+  &lt;header&gt;
+    &lt;h3&gt;New AI Technology Released&lt;/h3&gt;
+    &lt;p&gt;Published: June 2026&lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;section&gt;
+    &lt;p&gt;Article content goes here.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;Article footer information&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+</section>
+
+<section class="overview">
+  <h2>Student Timetable Table</h2>
+  <p class="explanation">
+    Tables are useful when information needs to be displayed in rows and
+    columns. A timetable is a realistic example of how HTML tables can organise
+    structured data.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Module</th>
+        <th>Time</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>CET138</td>
+        <td>10:00</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>CET140</td>
+        <td>14:00</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>CET141</td>
+        <td>11:30</td>
+      </tr>
+    </table>
+  </div>
+
+  <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Day&lt;/th&gt;
+    &lt;th&gt;Module&lt;/th&gt;
+    &lt;th&gt;Time&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Monday&lt;/td&gt;
+    &lt;td&gt;CET138&lt;/td&gt;
+    &lt;td&gt;10:00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</section>
+
+<section class="overview">
+  <h2>HTML Form Validation Demo</h2>
+  <p class="explanation">
+    HTML can perform basic form validation without JavaScript. Attributes such
+    as <code>required</code>, <code>type="email"</code>, and
+    <code>minlength</code> help browsers check user input before a form is
+    submitted.
+  </p>
+
+  <form class="demo-form">
+    <label for="demo-email">Email Address</label>
+    <input type="email" id="demo-email" placeholder="Enter Email" required>
+
+    <label for="demo-password">Password</label>
+    <input type="password" id="demo-password" placeholder="Enter Password" minlength="8" required>
+
+    <button type="submit" class="btn">Create Account</button>
+  </form>
+
+  <p class="explanation">
+    If the email is not valid or the password is shorter than eight characters,
+    the browser can show a validation message. This demonstrates built-in HTML
+    validation features.
+  </p>
+
+  <pre><code>&lt;input type="email" required placeholder="Enter Email"&gt;
+
+&lt;input type="password" minlength="8" required&gt;</code></pre>
+</section>
+
+<section class="overview">
+  <h2>Accessibility Demo</h2>
+  <p class="explanation">
+    Accessibility means making websites usable for as many people as possible.
+    The <code>alt</code> attribute is important because screen readers use it to
+    describe images to visually impaired users.
+  </p>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Bad Example</h3>
+      <pre><code>&lt;img src="cat.jpg"&gt;</code></pre>
+      <p>
+        This image has no alternative text, so users with screen readers may not
+        understand what the image shows.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Good Example</h3>
+      <pre><code>&lt;img src="cat.jpg" alt="Orange cat sleeping on a chair"&gt;</code></pre>
+      <p>
+        This image includes useful alternative text, making the content more
+        accessible and meaningful.
+      </p>
+    </article>
+  </div>
+</section>
+
+    <section class="overview">
+      <h2>Forms In HTML</h2>
+      <p class="explanation">
+        HTML forms collect information from users. They are used in login pages,
+        registration pages, search bars, checkout pages, surveys, and contact
+        forms.
+      </p>
+
+      <form class="demo-form">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="name@example.com" required>
+
+        <label for="topic">Topic</label>
+        <select id="topic">
+          <option>HTML question</option>
+          <option>Portfolio feedback</option>
+          <option>General message</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+
+        <button type="button" class="btn">Submit Example</button>
+      </form>
+
+      <p class="explanation">
+        This demonstration uses labels, inputs, a select menu, a textarea, and a
+        button. Labels are connected to form fields using matching
+        <code>for</code> and <code>id</code> attributes, which improves
+        accessibility and usability.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>Images, Links, And Multimedia</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Images</h3>
+          <p>
+            The <code>&lt;img&gt;</code> element displays images. The
+            <code>alt</code> attribute gives alternative text when the image
+            cannot load and helps screen reader users understand the image.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Links</h3>
+          <p>
+            The <code>&lt;a&gt;</code> element creates clickable links. Links
+            help users move between pages, open resources, or jump to sections
+            of the same page.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Multimedia</h3>
+          <p>
+            HTML5 supports media elements such as <code>&lt;video&gt;</code>
+            and <code>&lt;audio&gt;</code>, allowing websites to include media
+            without relying on external plugins.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Tables And Lists</h2>
+      <p class="explanation">
+        HTML tables and lists help organise information clearly. Lists are useful
+        for grouped points or steps, while tables are best for structured data
+        with rows and columns.
+      </p>
+
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML structures content&lt;/li&gt;
+  &lt;li&gt;CSS styles content&lt;/li&gt;
+  &lt;li&gt;JavaScript adds interactivity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Technology&lt;/th&gt;
+    &lt;th&gt;Purpose&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;HTML&lt;/td&gt;
+    &lt;td&gt;Structure&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>Accessibility In HTML</h2>
+      <p class="explanation">
+        Accessibility means designing websites so that all users, including
+        people with disabilities, can access and use them effectively. HTML
+        supports accessibility through semantic structure, alt text, form
+        labels, meaningful links, and correct heading order.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Alt Text</h3>
+          <p>
+            Alternative text describes images for screen readers and appears if
+            an image fails to load.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Labels</h3>
+          <p>
+            Labels identify form fields clearly and make forms easier to use
+            with assistive technologies.
+          </p>
+        </article>
+
+            <article class="card">
+          <h3>Keyboard Navigation</h3>
+          <p>
+            Good HTML allows users to move through links, buttons, and form
+            fields using a keyboard. This is important for users who cannot use
+            a mouse.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Heading Order</h3>
+          <p>
+            Headings should follow a clear order, such as h1, h2, and h3. This
+            helps screen readers and users understand the page structure.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Mini HTML Page Demo</h2>
+      <p class="explanation">
+        This example shows how semantic HTML can be used to create a small
+        article-style webpage with clear sections.
+      </p>
+      
+        <nav class="paper-nav">
+          Home | Articles | Tutorials | Contact
+        </nav>
+
+        <main class="paper-main">
+          <article class="paper-article">
+            <h3>Why HTML Structure Matters</h3>
+            <section>
+              <h4>Main Story</h4>
+              <p>
+                HTML gives webpages meaning by separating the header,
+                navigation, main content, article sections, side content, and
+                footer information.
+              </p>
+            </section>
+          </article>
+
+          <aside class="paper-aside">
+            <h4>Related Note</h4>
+            <p>Semantic tags improve accessibility and search engine understanding.</p>
+          </aside>
+        </main>
+
+        <footer class="paper-footer">
+          Student Web News Footer
+        </footer>
+      </div>
+
+      <pre><code>&lt;header&gt;Website header&lt;/header&gt;
+&lt;nav&gt;Navigation links&lt;/nav&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;section&gt;Article content&lt;/section&gt;
+  &lt;/article&gt;
+  &lt;aside&gt;Related information&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Footer information&lt;/footer&gt;</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>Common HTML Mistakes</h2>
+      <p class="explanation">
+        Avoiding common mistakes helps make webpages easier to read, maintain,
+        and use.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Missing Alt Text</h3>
+          <p>
+            Images should include useful alt text so users with screen readers
+            can understand the image content.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Incorrect Heading Order</h3>
+          <p>
+            Skipping heading levels can make the page structure confusing for
+            users and assistive technologies.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Unclosed Tags</h3>
+          <p>
+            Missing closing tags can break the layout and cause unexpected page
+            behaviour.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Using Divs For Everything</h3>
+          <p>
+            Semantic tags should be used where possible instead of relying only
+            on generic div elements.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Conclusion</h2>
+      <p class="explanation">
+        HTML is the foundation of web development. It gives webpages structure,
+        meaning, and accessibility. When HTML is written clearly with semantic
+        elements, correct attributes, forms, tables, lists, and media, it
+        becomes easier to style with CSS and make interactive with JavaScript.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>Full Stack Portfolio</h3>
+        <p>
+          Demonstrating comprehensive understanding of modern web development
+          technologies and best practices.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="fullstack.html">Full Stack Development</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="bootstrap.html">Bootstrap</a>
+        <a href="javascript.html">JavaScript</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>kit25c.nyn@ismt.edu.np</p>
+        <p>Nayan Khadka</p>
+        <p>University of Sunderland</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>This portfolio is part of the CET138 Full Stack Development module at the University of Sunderland.</p>
+      <p>Created by Nayan Khadka, 2026.</p>
+      <p>&copy; 2026 Full Stack Development Portfolio.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

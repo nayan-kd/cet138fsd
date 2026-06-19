@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>CET138 Portfolio</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fullstack.html">Full Stack</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="bootstrap.html">Bootstrap</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>CSS: Cascading Style Sheets</h2>
+      <p>
+        CSS is the styling language used to control the appearance and layout of
+        web pages. While HTML creates the structure, CSS improves how the page
+        looks by controlling colours, fonts, spacing, positioning, animations,
+        and responsiveness.
+      </p>
+    </section>
+
+    <section class="overview">
+      <h2>What Is CSS?</h2>
+      <p class="explanation">
+        CSS stands for Cascading Style Sheets. The word cascading means that
+        when more than one style rule applies to the same element, the browser
+        decides which rule should be used based on importance, specificity, and
+        order. CSS separates design from HTML structure, which makes websites
+        easier to maintain and update.
+      </p>
+    </section>
+
+   <section class="overview">
+  <h2>CSS Selectors</h2>
+  <p class="explanation">
+    Selectors are patterns used to target elements in the DOM so you can apply
+    styles to them. They can match by element name, class, ID, attributes,
+    position in the tree, state, and more.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Selector</th>
+          <th>Example</th>
+          <th>Example description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Type (element)</td><td><code>p</code></td><td>Selects all &lt;p&gt; elements.</td></tr>
+        <tr><td>Class</td><td><code>.card</code></td><td>Selects elements with <code>class="card"</code>.</td></tr>
+        <tr><td>ID</td><td><code>#main</code></td><td>Selects the element with <code>id="main"</code>.</td></tr>
+        <tr><td>Descendant</td><td><code>ul li</code></td><td>Selects &lt;li&gt; inside any &lt;ul&gt; (any depth).</td></tr>
+        <tr><td>Child</td><td><code>nav &gt; a</code></td><td>Selects direct &lt;a&gt; children of &lt;nav&gt;.</td></tr>
+        <tr><td>Adjacent sibling</td><td><code>h1 + p</code></td><td>Selects the first &lt;p&gt; immediately after an &lt;h1&gt;.</td></tr>
+        <tr><td>General sibling</td><td><code>h1 ~ p</code></td><td>Selects all &lt;p&gt; siblings that follow an &lt;h1&gt;.</td></tr>
+        <tr><td>Attribute (exists)</td><td><code>a[target]</code></td><td>Selects links that have a target attribute.</td></tr>
+        <tr><td>Attribute (equals)</td><td><code>input[type="email"]</code></td><td>Inputs whose type is exactly email.</td></tr>
+        <tr><td>Pseudo-class</td><td><code>a:hover</code></td><td>Links when the mouse pointer hovers over them.</td></tr>
+        <tr><td>Pseudo-element</td><td><code>p::first-line</code></td><td>The first formatted line of every paragraph.</td></tr>
+        <tr><td>Group</td><td><code>h1, h2, h3</code></td><td>Selects all &lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt; elements.</td></tr>
+        <tr><td>Universal</td><td><code>*</code></td><td>Selects all elements (use sparingly).</td></tr>
+        <tr><td>Negation</td><td><code>button:not(.primary)</code></td><td>Buttons that do not have the primary class.</td></tr>
+        <tr><td>Nth-child</td><td><code>li:nth-child(2)</code></td><td>The second list item within each parent list.</td></tr>
+        <tr><td>Nth-of-type</td><td><code>p:nth-of-type(odd)</code></td><td>Odd paragraphs within their parent.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="overview">
+  <h2>CSS Functions</h2>
+  <p class="explanation">
+    CSS functions are built-in helpers you can use inside property values for
+    calculations, color creation/mixing, gradients, transforms, filters,
+    responsive sizing, and more.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Function</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>attr(name)</code></td><td>Uses an element attribute value (mainly in content and limited properties).</td></tr>
+        <tr><td><code>blur(radius)</code></td><td>Filter that blurs an element by the given radius.</td></tr>
+        <tr><td><code>calc(expr)</code></td><td>Performs math with units, e.g. <code>width: calc(100% - 2rem)</code>.</td></tr>
+        <tr><td><code>clamp(min, pref, max)</code></td><td>Clamps a value between a minimum and maximum, great for fluid sizing.</td></tr>
+        <tr><td><code>color-mix(in space, c1 p, c2)</code></td><td>Mixes two colors in a color space, e.g. lab or srgb.</td></tr>
+        <tr><td><code>conic-gradient(...)</code></td><td>Creates a gradient that sweeps around a center point.</td></tr>
+        <tr><td><code>contrast(amount)</code></td><td>Filter that adjusts contrast of the element.</td></tr>
+        <tr><td><code>drop-shadow(...)</code></td><td>Filter that applies a shadow following the element's alpha shape.</td></tr>
+        <tr><td><code>env(var)</code></td><td>Reads environment variables, e.g. safe-area-inset-top on iOS.</td></tr>
+        <tr><td><code>hsl(h s% l% / a)</code></td><td>Defines a color by hue, saturation, and lightness, with optional alpha.</td></tr>
+        <tr><td><code>invert(amount)</code></td><td>Filter that inverts colors by the given amount.</td></tr>
+        <tr><td><code>linear-gradient(...)</code></td><td>Creates a linear gradient image.</td></tr>
+        <tr><td><code>matrix(...)</code></td><td>Low-level 2D transform matrix, rarely used directly.</td></tr>
+        <tr><td><code>max(a, b)</code></td><td>Returns the larger of two or more values.</td></tr>
+        <tr><td><code>min(a, b)</code></td><td>Returns the smaller of two or more values.</td></tr>
+        <tr><td><code>minmax(min, max)</code></td><td>Grid track sizing function for grid-template-columns/rows.</td></tr>
+        <tr><td><code>radial-gradient(...)</code></td><td>Creates a radial, circular, or elliptical gradient image.</td></tr>
+        <tr><td><code>rgb(r g b / a)</code></td><td>Defines a color by red, green, and blue, with optional alpha.</td></tr>
+        <tr><td><code>rotate(angle)</code></td><td>Transform that rotates an element.</td></tr>
+        <tr><td><code>saturate(amount)</code></td><td>Filter that increases or decreases color saturation.</td></tr>
+        <tr><td><code>scale(x[, y])</code></td><td>Transform that scales an element on x/y axes.</td></tr>
+        <tr><td><code>skew(ax[, ay])</code></td><td>Transform that skews an element along axes.</td></tr>
+        <tr><td><code>translate(x[, y])</code></td><td>Transform that moves an element along axes.</td></tr>
+        <tr><td><code>repeat(count, track)</code></td><td>Grid repeat helper for track lists, e.g. <code>repeat(3, 1fr)</code>.</td></tr>
+        <tr><td><code>url(path)</code></td><td>References an external resource, such as images or fonts.</td></tr>
+        <tr><td><code>var(--name[, fallback])</code></td><td>Reads a CSS custom property with optional fallback.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+    <section class="overview">
+      <h2>Hover Effects Playground</h2>
+      <p class="explanation">
+        Hover effects make a website feel more interactive. CSS can change
+        size, shadow, colour, position, and rotation when the user moves the
+        mouse over an element.
+      </p>
+
+      <div class="playground-grid hover-playground">
+  <div class="play-card scale-card" data-effect="scale">Scale Up</div>
+  <div class="play-card rotate-card" data-effect="rotate">Rotate</div>
+  <div class="play-card shadow-card" data-effect="shadow">Shadow Grow</div>
+  <div class="play-card glow-card" data-effect="glow">Glow Effect</div>
+  <div class="play-card lift-card" data-effect="lift">Lift Animation</div>
+</div>
+<pre id="hoverCode"><code>.scale-card:hover {
+  transform: scale(1.08);
+}</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>Flexbox Playground</h2>
+      <p class="explanation">
+        Flexbox is a one-dimensional layout system used to arrange items in a
+        row or column. It is useful for navigation bars, centering content, and
+        spacing items evenly.
+      </p>
+
+      <div class="control-buttons">
+        <button onclick="setFlex('row')">Row</button>
+        <button onclick="setFlex('column')">Column</button>
+        <button onclick="setFlex('center')">Center</button>
+        <button onclick="setFlex('between')">Space Between</button>
+      </div>
+
+      <div id="flexBox" class="flex-playground row-mode">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+      </div>
+
+      <pre id="flexCode"><code>.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>CSS Grid Playground</h2>
+      <p class="explanation">
+        CSS Grid is a two-dimensional layout system. It controls both rows and
+        columns, making it useful for galleries, dashboards, and page layouts.
+      </p>
+
+      <div class="control-buttons">
+        <button onclick="setGrid('two')">2 Columns</button>
+        <button onclick="setGrid('three')">3 Columns</button>
+        <button onclick="setGrid('dashboard')">Dashboard</button>
+        <button onclick="setGrid('magazine')">Magazine</button>
+      </div>
+
+      <div id="gridBox" class="grid-playground grid-two">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
+
+      <pre id="gridCode"><code>.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>Border Radius Generator</h2>
+      <p class="explanation">
+        The border-radius property controls how rounded an element is. It can
+        create square boxes, rounded cards, pill buttons, and circles.
+      </p>
+
+      <div class="control-buttons">
+        <button onclick="setRadius('square')">Square</button>
+        <button onclick="setRadius('rounded')">Rounded</button>
+        <button onclick="setRadius('pill')">Pill</button>
+        <button onclick="setRadius('circle')">Circle</button>
+      </div>
+
+      <div id="radiusBox" class="radius-demo rounded">Border Radius</div>
+    </section>
+
+    <section class="overview">
+      <h2>CSS Animation Showcase</h2>
+      <p class="explanation">
+        CSS animations use @keyframes to create movement without JavaScript.
+        They can make loaders, buttons, cards, and interface elements more
+        engaging.
+      </p>
+
+     <div class="playground-grid animation-showcase">
+  <div class="play-card bounce" data-anim="bounce">Bounce</div>
+  <div class="play-card spin" data-anim="spin">Spin</div>
+  <div class="play-card pulse" data-anim="pulse">Pulse</div>
+  <div class="play-card float" data-anim="float">Float</div>
+</div>
+      <pre id="animCode"><code>@keyframes pulse {
+  50% {
+    transform: scale(1.08);
+  }
+}</code></pre>
+}</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>Colour Theme Playground</h2>
+      <p class="explanation">
+        CSS variables allow developers to reuse colours across a website. This
+        makes it easier to create and update themes.
+      </p>
+
+      <div class="control-buttons">
+        <button onclick="setTheme('pink')">Pink Theme</button>
+        <button onclick="setTheme('dark')">Dark Theme</button>
+        <button onclick="setTheme('ocean')">Ocean Theme</button>
+        <button onclick="setTheme('forest')">Forest Theme</button>
+      </div>
+
+      <div id="themeCard" class="theme-card pink">
+        <h3>Theme Preview Card</h3>
+        <p>This card changes colour using CSS theme classes.</p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Transform Playground</h2>
+      <p class="explanation">
+        CSS transform can move, resize, rotate, and skew elements. These effects
+        are often used in hover animations and modern interfaces.
+      </p>
+
+      <div class="playground-grid transform-playground">
+        <div class="play-card translate-demo">translate()</div>
+        <div class="play-card scale-demo">scale()</div>
+        <div class="play-card rotate-demo">rotate()</div>
+        <div class="play-card skew-demo">skew()</div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>CSS Button Gallery</h2>
+      <p class="explanation">
+        Buttons are important interface elements. CSS can create different
+        button styles for different actions and visual importance.
+      </p>
+
+      <div class="button-gallery">
+        <button class="gallery-btn primary-btn">Primary</button>
+        <button class="gallery-btn outline-btn">Outline</button>
+        <button class="gallery-btn gradient-btn">Gradient</button>
+        <button class="gallery-btn neon-btn">Neon</button>
+        <button class="gallery-btn animated-btn">Animated</button>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Loading Animation Playground</h2>
+      <p class="explanation">
+        Loading animations give feedback while content is being processed or
+        loaded. They are usually made with CSS animation and keyframes.
+      </p>
+
+      <div class="loader-area">
+        <div class="spinner"></div>
+        <div class="dots"><span></span><span></span><span></span></div>
+        <div class="progress-loader"><span></span></div>
+        <div class="pulse-loader"></div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Responsive Design Demo</h2>
+      <p class="explanation">
+        Responsive design allows a website to adapt to different screen sizes.
+        Media queries can change layouts for desktop, tablet, and mobile users.
+      </p>
+<div class="control-buttons">
+  <button onclick="setResponsive('desktop')">Desktop</button>
+  <button onclick="setResponsive('tablet')">Tablet</button>
+  <button onclick="setResponsive('mobile')">Mobile</button>
+</div>
+      <div id="responsiveDemo" class="responsive-demo view-desktop">
+  <div>Desktop View</div>
+  <div>Tablet View</div>
+  <div>Mobile View</div>
+</div>
+
+<pre id="responsiveCode"><code>@media (max-width: 768px) {
+  .responsive-demo {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+    </section>
+
+    <section class="overview">
+      <h2>CSS Card Design Showcase</h2>
+      <p class="explanation">
+        Cards are used in many real websites for products, profiles, blogs, and
+        pricing sections. CSS controls their spacing, shadows, borders, and
+        hover effects.
+      </p>
+
+      <div class="cards">
+        <article class="card product-card">
+          <h3>Product Card</h3>
+          <p>Clean layout for showing product details.</p>
+          <button class="btn">View Product</button>
+        </article>
+
+        <article class="card profile-card">
+          <h3>Profile Card</h3>
+          <p>Useful for team members or user profiles.</p>
+          <button class="btn">View Profile</button>
+        </article>
+
+        <article class="card pricing-card">
+          <h3>Pricing Card</h3>
+          <p><strong>$19/month</strong></p>
+          <button class="btn">Choose Plan</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Gradient Playground</h2>
+      <p class="explanation">
+        Gradients blend colours together and can make sections, buttons, and
+        cards look modern.
+      </p>
+
+      <div class="playground-grid gradient-playground">
+        <div class="gradient-box linear">linear-gradient()</div>
+        <div class="gradient-box radial">radial-gradient()</div>
+        <div class="gradient-box conic">conic-gradient()</div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>CSS Mini Dashboard</h2>
+      <p class="explanation">
+        This mini dashboard combines Grid, Flexbox, cards, shadows, colours, and
+        hover effects. It shows how CSS skills can be used in a real interface.
+      </p>
+
+      <div class="mini-dashboard">
+        <div class="dash-card"><span>Revenue</span><strong>$12,400</strong></div>
+        <div class="dash-card"><span>Users</span><strong>1,248</strong></div>
+        <div class="dash-card"><span>Orders</span><strong>326</strong></div>
+        <div class="dash-card"><span>Messages</span><strong>48</strong></div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Conclusion</h2>
+      <p class="explanation">
+        CSS is an essential technology in modern web development because it
+        controls the appearance, layout, responsiveness, and interaction style of
+        websites. These playgrounds show how CSS can create professional,
+        attractive, and user-friendly web pages.
+      </p>
+
+      <div class="card references">
+        <h3>Sources Used For Research</h3>
+        <p>MDN Web Docs, W3Schools, and freeCodeCamp.</p>
+      </div>
+    </section>
+  </main>
+
+   <!-- ===== FOOTER WITH NAVIGATION BUTTONS ===== -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Full Stack Portfolio</h3>
+                <p>
+                    Demonstrating comprehensive understanding of modern web development
+                    technologies and best practices.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="fullstack.html">Full Stack Development</a></li>
+                    <li><a href="html.html">HTML</a></li>
+                    <li><a href="css.html">CSS</a></li>
+                    <li><a href="bootstrap.html">Bootstrap</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>kit25c.nyn@ismt.edu.np</p>
+                <p>Nayan Khadka</p>
+                <p>University of Sunderland</p>
+            </div>
+        </div>
+
+        <!-- ===== PAGE NAVIGATION BUTTONS ===== -->
+        <div class="footer-nav">
+            <a href="css.html" class="footer-nav-btn prev-btn">← Previous</a>
+            <span class="footer-nav-divider">|</span>
+            <a href="javascript.html" class="footer-nav-btn next-btn">Next →</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>This portfolio is part of the CET138 Full Stack Development module at the University of Sunderland.</p>
+            <p>Created by Nayan Khadka, 2026.</p>
+            <p>&copy; 2026 Full Stack Development Portfolio.</p>
+        </div>
+    </footer>
+
+          <script>
+    function setFlex(mode) {
+      const box = document.getElementById("flexBox");
+      box.className = "flex-playground " + mode + "-mode";
+      const flexCodeDisplay = document.querySelector('#flexCode code');
+      const flexCSS = {
+        row: `.flex-playground.row-mode {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n}`,
+        column: `.flex-playground.column-mode {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n}`,
+        center: `.flex-playground.center-mode {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}`,
+        between: `.flex-playground.between-mode {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}`
+      };
+      if (flexCSS[mode]) flexCodeDisplay.textContent = flexCSS[mode];
+    }
+
+    function setGrid(mode) {
+      const box = document.getElementById("gridBox");
+      box.className = "grid-playground grid-" + mode;
+      const gridCodeDisplay = document.querySelector('#gridCode code');
+      const gridCSS = {
+        two: `.grid-playground.grid-two {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 15px;\n}`,
+        three: `.grid-playground.grid-three {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 15px;\n}`,
+        dashboard: `.grid-playground.grid-dashboard {\n  display: grid;\n  grid-template-columns: 1fr 2fr;\n  grid-template-rows: auto 1fr;\n  gap: 15px;\n}`,
+        magazine: `.grid-playground.grid-magazine {\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr;\n  grid-auto-rows: minmax(100px, auto);\n  gap: 15px;\n}`
+      };
+      if (gridCSS[mode]) gridCodeDisplay.textContent = gridCSS[mode];
+    }
+
+    function setRadius(shape) {
+      const box = document.getElementById("radiusBox");
+      box.className = "radius-demo " + shape;
+    }
+
+    function setTheme(theme) {
+      const card = document.getElementById("themeCard");
+      card.className = "theme-card " + theme;
+    }
+
+    // ─── Hover effect code display ───
+    const effectCSS = {
+      scale: `.scale-card:hover {\n  transform: scale(1.08);\n}`,
+      rotate: `.rotate-card:hover {\n  transform: rotate(6deg);\n}`,
+      shadow: `.shadow-card:hover {\n  box-shadow: 0 12px 40px rgba(0,0,0,0.6);\n  transform: translateY(-2px);\n}`,
+      glow: `.glow-card:hover {\n  box-shadow: 0 0 30px rgba(196,132,252,0.5),\n              0 0 60px rgba(196,132,252,0.15);\n  transform: scale(1.02);\n}`,
+      lift: `.lift-card:hover {\n  transform: translateY(-12px) scale(1.02);\n  box-shadow: 0 20px 50px rgba(0,0,0,0.5);\n}`
+    };
+    const hoverCards = document.querySelectorAll('.play-card');
+    const codeDisplay = document.querySelector('#hoverCode code');
+    hoverCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const effect = this.dataset.effect;
+        if (effect && effectCSS[effect]) codeDisplay.textContent = effectCSS[effect];
+      });
+    });
+
+    // ─── Animation Showcase ───
+    const animCSS = {
+      bounce: `@keyframes bounce {\n  0%, 100% {\n    transform: translateY(0);\n  }\n  50% {\n    transform: translateY(-20px);\n  }\n}\n\n.bounce {\n  animation: bounce 0.8s ease infinite;\n}`,
+      spin: `@keyframes spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n.spin {\n  animation: spin 1.5s linear infinite;\n}`,
+      pulse: `@keyframes pulse {\n  50% {\n    transform: scale(1.08);\n  }\n}\n\n.pulse {\n  animation: pulse 0.8s ease-in-out infinite;\n}`,
+      float: `@keyframes float {\n  0%, 100% {\n    transform: translateY(0);\n  }\n  50% {\n    transform: translateY(-12px);\n  }\n}\n\n.float {\n  animation: float 1.2s ease-in-out infinite;\n}`
+    };
+    const animCards = document.querySelectorAll('.animation-showcase .play-card');
+    const animCodeDisplay = document.querySelector('#animCode code');
+    animCards.forEach(card => {
+      card.addEventListener('click', function() {
+        this.classList.toggle('anim-paused');
+        const animKey = this.dataset.anim;
+        if (animKey && animCSS[animKey]) animCodeDisplay.textContent = animCSS[animKey];
+      });
+    });
+
+    // ─── Responsive Design Demo ───
+    function setResponsive(view) {
+      const container = document.getElementById('responsiveDemo');
+      container.classList.remove('view-desktop', 'view-tablet', 'view-mobile');
+      container.classList.add('view-' + view);
+      const codeDisplay = document.querySelector('#responsiveCode code');
+      const responsiveCSS = {
+        desktop: `/* Desktop: 3 columns */\n.responsive-demo {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 15px;\n}`,
+        tablet: `/* Tablet: 2 columns */\n@media (max-width: 768px) {\n  .responsive-demo {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}`,
+        mobile: `/* Mobile: 1 column */\n@media (max-width: 480px) {\n  .responsive-demo {\n    grid-template-columns: 1fr;\n  }\n}`
+      };
+      if (responsiveCSS[view]) {
+        codeDisplay.textContent = responsiveCSS[view];
+      }
+    }
+  </script>
+</body>
+</html>
